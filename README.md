@@ -57,7 +57,7 @@ avahi:uTgaD2s17tOZ.:1002:1002:Linux User,,,:/home/avahi:/bin/sh
 netdev:IY9bkphWuof06:1003:1003:Linux User,,,:/home/netdev:/bin/sh
 ```
 
-**IMPORTANT!** messagebus,avahi and netdev accounts have empty passwords (their hashes can be found here: https://www.seancassidy.me/etc/passwords.txt). This along with enabled _telnetd_ is a _**grave security threat**_! Only sshd account is somewhat protected, because there /etc/shadow that the `:x:` points to doesn't exist. 
+**IMPORTANT!** messagebus,avahi and netdev accounts have empty passwords (their hashes can be found here: https://www.seancassidy.me/etc/passwords.txt). This along with enabled _telnetd_ is a _**grave security threat**_! Only sshd account is somewhat protected, because the /etc/shadow that the `:x:` points to doesn't exist and the authentication fails altogether. 
 
 Refer to **Fixes -> Disable telnetd**
 
@@ -76,7 +76,7 @@ There's a built in remote help/E.T call home feature, that establishes a tunnel 
 
 ### Secure system accounts with empty passwords
 
-To disable the possibility of logging in without a password over telnet, change hashes for users other than root to `:x:` (for example using _vi_).
+To disable the possibility of logging in without a password over telnet, change hashes for users other than root to `:x:` (for example using _vi_). You should end up with the following:
 
 ```
 (...)
