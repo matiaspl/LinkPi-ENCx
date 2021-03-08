@@ -191,6 +191,8 @@ cat /proc/media-mem
 ## Software/firmware update changlelog
 General note by the manufacturer - after the update some functions take effect after restarting twice.
 
+The devices come from factory having versions of firmware not available for download (e.g. 20201111)
+
 ### update_20210123
 * ENC1V2 adds remote control operation support
 * ENCTiny improves stability
