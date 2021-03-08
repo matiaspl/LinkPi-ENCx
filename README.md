@@ -154,8 +154,8 @@ There are however vendor provided additional modules:
 - https://gitee.com/LinkPi/ - official Link Pi code repository
 - https://gitee.com/LinkPi/Encoder/wikis - official docs, good source of knowledge about the internals and firmware
 - https://gitee.com/LinkPi/Encoder/issues - my bug list (I'm not sure any developer ever looked at those)
-- https://blog.csdn.net/weixin_41486034 - Chinese blog with a lot of fun ENCx use cases and ideas
-- https://linkpi.cn/archives/444 - a repost of an article on extensive ENC1 testing
+- https://blog.csdn.net/weixin_41486034 - Chinese blog with a lot of fun ENCx use cases and ideas (most likely ran by a Link Pi developer ot a tech-savvy salesperson)
+- https://linkpi.cn/archives/444 - a repost of a CSDN article on extensive ENC5 testing
 
 ## Getting information from HiSilicon HW accelerated AV backend 
 (https://www.programmersought.com/article/52274083303
