@@ -7,7 +7,7 @@ The base software is shared among whole line of Link Pi encoders, so ENC-Tiny, E
 
 ## Personal disclaimer
 
-My personal opinion is that they are great devices, more capable than some of 10x as expensive known-brand encoders, with a well planned and responsive UI. The picture and audio quality is good and everything "just works" (I'm kind of used not to expect much from a $100-ish video devices, so getting my hands on and testing ENC1 was an Eureka moment ;) ) 
+My personal opinion is that they are great devices, more capable than some of 10x as expensive known-brand encoders. It has a well planned and responsive UI. The picture and audio quality is good and everything "just works". I'm kind of used not to expect much from a $100-ish video devices, so getting my hands on and testing ENC1 was an Eureka moment ;)
 
 I tried contacting Link Pi (both dev and sales) about the security issues but unfortunately got no response, that's why I decided to write about all the security issues here. 
 
@@ -21,7 +21,7 @@ It's a real pity that the Linux system underneath didn't get as much love as the
 * audio sampling rate up to 96 kHz is supported (but not enabled - it can be added manually by editing the right PHP script)
 * OPUS audio codec is supported (software only and disabled by default)
 
-## Interesting pages not linked anywhere 
+## Interesting internal pages (not linked/unused/model-specific) 
 
 * http://enc1/test.html - possibly a QA leftover, allows unauthorised slideshow view of all inputs
 * http://enc1/fac.php - _low level factory settings_ (also uses oled.php, themes.php and remote.php)
