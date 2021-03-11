@@ -27,6 +27,8 @@ It's a real pity that the Linux system underneath didn't get as much love as the
 * http://enc1/fac.php - _low level factory settings_ (also uses oled.php, themes.php and remote.php)
 * http://enc1/ndireg.php - for entering the NDI license string (sold separately)
 * http://enc1/remote.php and http://enc1/remotelp.php - IR remote configuration (supported on ENC1V2)
+* http://enc1/monitor.php - motion detection
+* http://enc1/face.php - face recognition
 
 Engineering leftovers:
 
