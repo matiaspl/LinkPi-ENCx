@@ -152,13 +152,6 @@ There are however vendor provided additional modules:
 - hardware SHA256 accelerator - atsha204a
 - unknown GPIO multiplexer(s)
 
-## Links
-- https://gitee.com/LinkPi/ - official Link Pi code repository
-- https://gitee.com/LinkPi/Encoder/wikis - official docs, good source of knowledge about the internals and firmware
-- https://gitee.com/LinkPi/Encoder/issues - my bug list (I'm not sure any developer ever looked at those)
-- https://blog.csdn.net/weixin_41486034 - Chinese blog with a lot of fun ENCx use cases and ideas (most likely ran by a Link Pi developer ot a tech-savvy salesperson)
-- https://linkpi.cn/archives/444 - a repost of a CSDN article on extensive ENC5 testing
-
 ## Getting information from HiSilicon HW accelerated AV backend 
 (https://www.programmersought.com/article/52274083303
 
@@ -257,3 +250,11 @@ The devices come from factory having versions of firmware not available for down
 ### update_20200420
 * Newly added platform live video preview
 * Improve the applet interface
+
+## Links
+- https://gitee.com/LinkPi/ - official Link Pi code repository
+- https://gitee.com/LinkPi/Encoder/wikis - official docs, good source of knowledge about the internals and firmware
+- https://gitee.com/LinkPi/Encoder/issues - my bug list (I'm not sure any developer ever looked at those)
+- https://blog.csdn.net/weixin_41486034 - Chinese blog with a lot of fun ENCx use cases and ideas (most likely ran by a Link Pi developer ot a tech-savvy salesperson)
+- https://linkpi.cn/archives/444 - a repost of a CSDN article on extensive ENC5 testing
+
