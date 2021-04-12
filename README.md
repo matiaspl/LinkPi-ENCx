@@ -288,4 +288,5 @@ The devices come from factory having versions of firmware not available for down
 - https://gitee.com/LinkPi/Encoder/issues - my bug list (I'm not sure any developer ever looked at those)
 - https://blog.csdn.net/weixin_41486034 - Chinese blog with a lot of fun ENCx use cases and ideas (most likely ran by a Link Pi developer ot a tech-savvy salesperson)
 - https://linkpi.cn/archives/444 - a repost of a CSDN article on extensive ENC5 testing
+- http://endeco.xyz/support - english manual for a rebranded ENC1/ENCSH
 
