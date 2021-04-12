@@ -183,6 +183,37 @@ Getting information about memory used by the backend:
 cat /proc/media-mem
 ```
 
+## F3520D pinout
+
+* J1 - USB 0
+ 1. +5V
+ 2. USB-
+ 3. USB+
+ 4. GND
+
+* J4 - USB 1
+ 1. +5V
+ 2. USB-
+ 3. USB+
+ 4. GND
+
+* P5 - VGA
+ 1. +5V
+ 2. NC
+ 3. NC
+ 4. VSync
+ 5. HSync
+ 6. GND
+ 7. Red
+ 8. Green
+ 9. Blue
+ 10. GND
+
+* J16 - UART 0
+ 1. TX
+ 2. GND
+ 3. RX
+
 ## Software/firmware update changlelog
 General note by the manufacturer - after the update some functions take effect after restarting twice.
 
