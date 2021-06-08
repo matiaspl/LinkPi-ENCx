@@ -120,6 +120,7 @@ mkdir /var/log
 syslogd
 ```
 or enable it in the startup scripts.
+
 4. The device has 256 MB of internal memory. Quite unusual for this type of device, the whole filesystem is mounted in writable mode:
 ```
 ~ # df -h
