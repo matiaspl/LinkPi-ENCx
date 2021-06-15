@@ -9,9 +9,9 @@ The base software is shared among whole line of Link Pi encoders, so ENC-Tiny, E
 
 My personal opinion is that they are great devices, more capable than some of 10x as expensive known-brand encoders. It has a well planned and responsive UI. The picture and audio quality is good and everything "just works". I'm kind of used not to expect much from a $100-ish video devices, so getting my hands on and testing ENC1 was an Eureka moment ;)
 
-I tried contacting Link Pi (both dev and sales) about the security issues but unfortunately got no response, that's why I decided to write about all the security issues here. 
+I tried contacting Link Pi (both dev and sales) about the security issues but unfortunately got no response, that's why I decided to write about all potential and real problems here. 
 
-If you guys/gals are reading this please check your emails and at least tell me to bugger off ;)
+If LinkPi guys/gals are reading this please check your emails and at least tell me to bugger off ;)
 
 It's a real pity that the Linux system underneath didn't get as much love as the UI, but a cautious linux beginner can make the device more secure in just a few steps.
 
@@ -20,6 +20,12 @@ It's a real pity that the Linux system underneath didn't get as much love as the
 * internal RTMP server accepts connections from outside using rtmp://enc1/live playpath and any stream key (avoid stream* and sub* keys - they are used internally)
 * audio sampling rate up to 96 kHz is supported (but not enabled - it can be added manually by editing the right PHP script)
 * OPUS audio codec is supported (software only and disabled by default)
+
+## 3rd party apps
+
+Statically compiled armhf applications seem to work fine. I tried ffmpeg and v4l2-ctl and they both worked. 
+
+* v4l2-ctl & v4l2ctl.php - allows remote control of USB webcams
 
 ## Interesting internal pages (not linked/unused/model-specific) 
 
