@@ -80,6 +80,8 @@ The superadmin account is undocumented, so it's important to either delete it by
 ### Remote help
 There's a built in remote help/E.T call home feature, that establishes a tunnel connection to Link Pi server using NGROK. If you don't need it, delete the IP address from the ``$remote=`` line in /link/web/config.php and reboot.
 
+UPDATE May 2021: the remote management has been made publicly available. if you are a WeChat user you can acquire the bindng code at [[wx.linkpi.cn]] and pair your encoder with the provided web remote access system (open the "Advanced Settings" -> "Remote Access" page of the encoder, paste the correct binding code, turn on the remote access function, and save). The system is said to be in early stage of development and occasional downtime may occur.
+
 ## Fixes
 
 ### Secure system accounts with empty passwords
@@ -225,6 +227,20 @@ cat /proc/media-mem
 General note by the manufacturer - after the update some functions take effect after restarting twice.
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
+
+### update_20210607
+* Fix the language switching problem caused by the previous version
+* Fix the MP4 recording problem caused by the previous version
+*Applicable to any version after 20210123
+
+### update_20210527
+* Add remote access function (how to use )
+* Add custom layout design interface
+* Optimize decoding compatibility
+* Optimize decoding fluency (synchronous mode)
+* Solve the problem that the network input source cannot be re-encoded after restarting
+* Enhanced HDMI input stability
+*Applicable to any version after 20210123
 
 ### update_20210123
 * ENC1V2 adds remote control operation support
