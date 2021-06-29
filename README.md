@@ -17,7 +17,7 @@ It's a real pity that the Linux system underneath didn't get as much love as the
 
 ## Undocumented features
 * USBCam allows audio only streaming with a UAC device (e.g. USB microphone)
-* internal RTMP server accepts connections from outside using rtmp://enc1/live playpath and any stream key (avoid stream* and sub* keys - they are used internally)
+* internal RTMP server accepts connections from outside using rtmp://enc1_ip/live playpath and any stream key (avoid stream* and sub* keys - they are used internally)
 * audio sampling rate up to 96 kHz is supported (but not enabled - it can be added manually by editing the right PHP script)
 * OPUS audio codec is supported (software only and disabled by default)
 
@@ -80,7 +80,9 @@ The superadmin account is undocumented, so it's important to either delete it by
 ### Remote help
 There's a built in remote help/E.T call home feature, that establishes a tunnel connection to Link Pi server using NGROK. If you don't need it, delete the IP address from the ``$remote=`` line in /link/web/config.php and reboot.
 
-UPDATE May 2021: the remote management has been made publicly available. if you are a WeChat user you can acquire the bindng code at [[wx.linkpi.cn]] and pair your encoder with the provided web remote access system (open the "Advanced Settings" -> "Remote Access" page of the encoder, paste the correct binding code, turn on the remote access function, and save). The system is said to be in early stage of development and occasional downtime may occur.
+UPDATE May 2021: the remote management has been made publicly available. If you are a WeChat user you can acquire the bindng code at [[wx.linkpi.cn]] and pair your encoder with the provided web remote access system (open the "Options" -> "Reverse proxy" page of the encoder, paste the correct binding code, turn on the remote access function, and save). 
+
+The system is said to be in early stage of development and occasional downtime may occur.
 
 ## Fixes
 
@@ -224,7 +226,7 @@ cat /proc/media-mem
  3. RX
 
 ## Software/firmware update changlelog
-General note by the manufacturer - after the update some functions take effect after restarting twice.
+After the updates up to 20210123 some functions take effect after restarting twice. Newer versions of the firmware seem to perform the restarts automatically.
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
