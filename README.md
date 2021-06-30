@@ -242,6 +242,7 @@ The devices come from factory having versions of firmware not available for down
 * Optimize decoding fluency (synchronous mode)
 * Solve the problem that the network input source cannot be re-encoded after restarting
 * Enhanced HDMI input stability
+
 *Applicable to any version after 20210123
 
 ### update_20210123
