@@ -16,16 +16,22 @@ If LinkPi guys/gals are reading this please check your emails and at least tell 
 It's a real pity that the Linux system underneath didn't get as much love as the UI, but a cautious linux beginner can make the device more secure in just a few steps.
 
 ## Undocumented features
+### Software
 * USBCam allows audio only streaming with a UAC device (e.g. USB microphone)
 * internal RTMP server accepts connections from outside using rtmp://enc1_ip/live playpath and any stream key (avoid stream* and sub* keys - they are used internally)
+* since _**update_20210927**_ there's a local SRT server (SLS) in listener mode accepting connections with proper streamID. If the encoding party pushes it's stream to srt://enc1_ip:8080?streamid=push/live/XYZ and the player/decoder can connect to the stream here: srt://enc1_ip:8080?streamid=pull/live/XYZ (multiple client connections are supported. Note: SLS built in parser overwrites MPEGTS video headers with H.264 metadata, so you will have hard time playing back HEVC streams sent to SLS. Also, encyption is not supported.
 * audio sampling rate up to 96 kHz is supported (but not enabled - it can be added manually by editing the right PHP script)
 * OPUS audio codec is supported (software only and disabled by default)
+
+### Hardware
+* the encoders can be powered with 5V using a powerbank or a USB power and a USB-A to DC 5.5x2.5mm barrel connector cable, provided they can deliver ~2 amps. (Carl Mills)
+* there's no power regulator between USB-C and regular USB on ENC1V2, so if you provide 9/12V over USB-C tthe device will boot up, but the same voltage will most likely fry whatever's connected to the other USB ports (Carl Mills)
 
 ## 3rd party apps
 
 Statically compiled armhf applications seem to work fine. I tried ffmpeg and v4l2-ctl and they both worked. 
 
-* v4l2-ctl & v4l2ctl.php - allows remote control of USB webcams
+* v4l2-ctl & v4l2ctl-ctl-with-php (https://github.com/wilwad/v4l2-ctl-with-php) - allows remote control of USB webcams params (brightness/contrast/backlight, etc.)
 
 ## Interesting internal pages (not linked/unused/model-specific) 
 
@@ -230,6 +236,16 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### update_20210927
+* Added frp support
+* Built-in sls service (how to use )
+* The streamID attribute is added to the SRT output of the output setting page
+* Improve ntp time synchronization
+* Optimize audio and video synchronization
+* Solve the problem of possible conflict between remote access and srt
+* Solve the problem of abnormal increase in cpu occupancy rate under certain circumstances
+* Revise the display effect of web theme
+
 ### update_20210607
 * Fix the language switching problem caused by the previous version
 * Fix the MP4 recording problem caused by the previous version
@@ -314,5 +330,5 @@ The devices come from factory having versions of firmware not available for down
 - https://gitee.com/LinkPi/Encoder/issues - my bug list (I'm not sure any developer ever looked at those)
 - https://blog.csdn.net/weixin_41486034 - Chinese blog with a lot of fun ENCx use cases and ideas (most likely ran by a Link Pi developer or a tech-savvy salesperson)
 - https://linkpi.cn/archives/444 - a repost of a CSDN article on extensive ENC5 testing
-- http://endeco.xyz/support - english manual for a rebranded ENC1/ENCSH
+- http://wiki.endeco.xyz/ - english manual for a rebranded and secured LinkPi encoders
 
