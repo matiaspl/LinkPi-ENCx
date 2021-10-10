@@ -239,7 +239,7 @@ After the updates up to 20210123 some functions take effect after restarting twi
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
 ### update_20210927
-* Added frp support
+* Added frp support (https://github.com/fatedier/frp)
 * Built-in sls service (https://github.com/Edward-Wu/srt-live-server)
 * The streamID attribute is added to the SRT output of the output setting page
 * Improve ntp time synchronization
@@ -247,7 +247,7 @@ The devices come from factory having versions of firmware not available for down
 * Solve the problem of possible conflict between remote access and srt
 * Solve the problem of abnormal increase in cpu occupancy rate under certain circumstances
 * Revise the display effect of web theme
-* _Low bitrate NDI support (vendor forgot to mention it in the changelog). The low bitate stream follows the sub stream settings._
+* _Low bitrate NDI support (vendor forgot to mention it in the changelog). Low bitate NDI stream follows the sub stream settings._
 
 ### update_20210607
 * Fix the language switching problem caused by the previous version
