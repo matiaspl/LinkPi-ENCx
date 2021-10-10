@@ -240,13 +240,14 @@ The devices come from factory having versions of firmware not available for down
 
 ### update_20210927
 * Added frp support
-* Built-in sls service (how to use )
+* Built-in sls service (https://github.com/Edward-Wu/srt-live-server)
 * The streamID attribute is added to the SRT output of the output setting page
 * Improve ntp time synchronization
 * Optimize audio and video synchronization
 * Solve the problem of possible conflict between remote access and srt
 * Solve the problem of abnormal increase in cpu occupancy rate under certain circumstances
 * Revise the display effect of web theme
+* _Low bitrate NDI support (vendor forgot to mention it in the changelog). The low bitate stream follows the sub stream settings._
 
 ### update_20210607
 * Fix the language switching problem caused by the previous version
