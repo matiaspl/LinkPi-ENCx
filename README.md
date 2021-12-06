@@ -239,15 +239,15 @@ After the updates up to 20210123 some functions take effect after restarting twi
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
 ### update_20211201
-Added support for integrated call system and Tally lights [Link to official wiki](https://gitee.com/LinkPi/Encoder/wikis/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B/%E9%9B%86%E6%88%90%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F/%E9%9B%86%E6%88%90%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0)
-New configuration file import and export function
-New background media service configuration file modification function
-Format verification of parameters such as ip on the network settings page
-Recording support file segmentation
-Support special U disk or tf card without partition
-Fixed the problem of invalid audio from usb camera
-Fix the abnormal display of OLED recording status
-Fix the problem that the network input will restart when saving parameters
+* Added support for integrated call system and Tally lights [Link to official wiki](https://gitee.com/LinkPi/Encoder/wikis/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B/%E9%9B%86%E6%88%90%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F/%E9%9B%86%E6%88%90%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0)
+* New configuration file import and export function
+* New background media service configuration file modification function
+* Format verification of parameters such as ip on the network settings page
+* Recording support file segmentation
+* Support special U disk or tf card without partition
+* Fixed the problem of invalid audio from usb camera
+* Fix the abnormal display of OLED recording status
+* Fix the problem that the network input will restart when saving parameters
 
 ### update_20210927
 * Added frp support (https://github.com/fatedier/frp)
