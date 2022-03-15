@@ -92,6 +92,9 @@ UPDATE May 2021: the remote management has been made publicly available. If you 
 
 The system is said to be in early stage of development and occasional downtime may occur.
 
+### ONVIF
+A non-protected ONVIF service is running by default with no real way to disable it through the UI
+
 ## Fixes
 
 ### Secure system accounts with empty passwords
