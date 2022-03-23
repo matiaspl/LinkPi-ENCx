@@ -247,7 +247,7 @@ The devices come from factory having versions of firmware not available for down
 * New background media service configuration file modification function
 * Format verification of parameters such as ip on the network settings page
 * Recording support file segmentation
-* Support special U disk or tf card without partition
+* Support special USB disk or tf card without partition
 * Fixed the problem of invalid audio from usb camera
 * Fix the abnormal display of OLED recording status
 * Fix the problem that the network input will restart when saving parameters
