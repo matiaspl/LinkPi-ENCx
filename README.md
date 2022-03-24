@@ -46,7 +46,7 @@ Statically compiled armhf applications seem to work fine. I tried ffmpeg and v4l
 
 Engineering leftovers:
 
-* http://enc1/demo/audio.php - audio mixer, not working possibly due to jQuery problems
+* http://enc1/demo/audio.php - audio mixer, frontend for [AB33EP expansion board](https://gitee.com/LinkPi/Audio/wikis/pages/preview?sort_id=1475161&doc_id=324053)
 * http://enc1/demo/audio2.php - backend for audio.php?
 * http://enc1/demo/config.html - looks like a "set defaults" script
 * http://enc1/demo/rtmp.html
