@@ -92,7 +92,7 @@ netdev:IY9bkphWuof06:1003:1003:Linux User,,,:/home/netdev:/bin/sh
 Refer to **Fixes -> Disable telnetd**
 
 ### Web
-Passwords are stored in /link/config/passwd.json as MD5 unsalted chechsums. The defaults are:
+Passwords are stored in `/link/config/passwd.json` as MD5 unsalted chechsums. The defaults are:
 ```
 admin / admin
 superadmin / linkpi.com
@@ -100,7 +100,7 @@ superadmin / linkpi.com
 The superadmin account is undocumented, so it's important to either delete it by hand or at least change the password.
 
 ### Remote help
-There's a built in remote help/E.T. call home feature, that establishes a tunnel connection to Link Pi server using NGROK. If you don't need it, delete the IP address from the ``$remote=`` line in /link/web/config.php and reboot.
+There's a built in remote help/E.T. call home feature, that establishes a tunnel connection to Link Pi server using NGROK. If you don't need it, delete the IP address from the ``$remote=`` line in `/link/web/config.php` and reboot.
 
 **UPDATE 05.2021**: the remote management has been made publicly available. If you are a WeChat user you can acquire the bindng code at [[wx.linkpi.cn]] and pair your encoder with the provided web remote access system (open the "Options" -> "Reverse proxy" page of the encoder, paste the correct binding code, turn on the remote access function, and save). 
 
@@ -150,10 +150,10 @@ netdev:x:1003:1003:Linux User,,,:/home/netdev:/bin/sh
 
 ### Disable telnet daemon
 
-Comment the _telnetd_ line from /etc/init.d/rcS.
+Comment the _telnetd_ line from `/etc/init.d/rcS`.
 
 ### Set reasonable timezone
-The device uses busybox/libc timezone management, which means you can use /etc/TZ for setting the correct time and date. 
+The device uses busybox/libc timezone management, which means you can use `/etc/TZ` for setting the correct time and date. 
 
 Refer to https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html for creating a line that fits your time zone. 
 
@@ -174,7 +174,7 @@ This will allow _ssh-keygen_ to copy the keys to ~/.ssh.
 ## Other findings and comments
 1. The whole UI is written in PHP
 2. The software is common for devices with and without OLED display - specific functions are enabled through http://enc1/fac.php - this way you can enable USB recording, UVC webcam input (and USB UAC audio devices in that matter), NDI support, video player, UART support and the assignment of GPIO buttons to specific functions. 
-If enabling doesn't work, you may need to look into /link/web/config.php and add the parameters to the appropriate files manually (e.g. $NDI=true and $OPUS=true). Use /link/fac/DEF/web/config.php for reference.
+If enabling doesn't work, you may need to look into `/link/web/config.php` and add the parameters to the appropriate files manually (e.g. $NDI=true and $OPUS=true). Use `/link/fac/DEF/web/config.php` for reference.
 3. The device does hardly any internal logging - there are only nginx-rtmp fork (supporting rtmp and rtmp/flv over http) and php-fpm logs. To enable system logging (until next restart) do:
 ```
 mkdir /var/log
