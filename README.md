@@ -26,8 +26,8 @@ It's a real pity that the Linux system underneath didn't get as much love as the
 * OPUS audio codec is supported (software only and disabled by default)
 
 ### Hardware
-* the encoders can be powered with 5V using a powerbank or a USB power and a USB-A to DC 5.5x2.5mm barrel connector cable, provided they can deliver ~2 amps. (Carl Mills)
-* there's no power regulator between USB-C and regular USB on ENC1V2, so if you provide 9/12V over USB-C tthe device will boot up, but the same voltage will most likely fry whatever's connected to the other USB ports (Carl Mills)
+* the encoders can be powered with 5V using a powerbank or a USB power and a USB-A to DC 5.5x2.5mm barrel connector cable, provided they can deliver ~2 amps. (Carl Mills@EnDeCo)
+* there's no power regulator between USB-C and regular USB on ENC1V2, so if you provide 9/12V over USB-C tthe device will boot up, but the same voltage will most likely fry whatever's connected to the other USB ports (Carl Mills@EnDeCo)
 
 ## 3rd party apps
 
@@ -57,6 +57,14 @@ Engineering leftovers:
 * http://enc1/demo/timer.html - javascript timer, helpful for latency measurement
 * http://enc1/demo/demo.html - face recognition, not working
 * http://enc1/wxfunc.php - possibly a part of an old backend, allows non authorised changes
+
+## Intercom & tally
+
+The system is using an unknown UDP-based protocol for communication through a central server (source not public - installer and binaries located here: https://gitee.com/LinkPi/Service/)
+
+The tally system is able to utilize vMix and Sinsam (Chinese visual clone of vMix) API. 
+
+Firmware analysis shows that the system relies on a specific "ttyTally" interface for the tally (a remote transmitter and a generic USB UAC soundcard
 
 ## Default passwords/backdoors
 ### SSH/telnet
@@ -121,9 +129,9 @@ SUBSYSTEM=="net", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14db", KERNEL=="et
 
 By default LinkLib uses `/link/config/nosignal.yuv` image as the placeholder image in case a video source is unavailable while the box is streaming. This file is a 1920x1080 raw YUV (YUV420SP or simply YUV420P) bitmap. To create a customized slate, convert your 1920x1080 image with ffmpeg like so:
 ```
-ffmpeg yourfile -c:v rawvideo -pixel_format yuv420p nosignal.yuv
+ffmpeg yourfile.png -c:v rawvideo -pix_fmt yuv420p nosignal.yuv
 ```
-and overwrite the original.
+and overwrite the original. 
 
 ### Secure system accounts with empty passwords
 
