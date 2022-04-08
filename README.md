@@ -5,7 +5,7 @@ Both devices are based on a F3520D mainboard (https://linkpi.cn/archives/870). T
 
 The base software is shared among whole line of Link Pi encoders, so ENC-Tiny (TinyENC1), ENC1, ENC1V2, ENC2, ENC5, ENC9 and ENCSH (and TBS) have the same ups and downs. 
 
-Note: by the looks of ot TinyENC1 seems to have a bit different firmware with no telnet/ssh access enabled by default. If anyone's interested in getting inside those boxes consider donating one or sending me the recovery firmware.
+UPDATE 8.04.2022: by the looks of it TinyENC1 seems to actually have a bit different firmware with no telnet/ssh access enabled by default. If anyone's interested in getting inside those boxes consider donating one or sending me the recovery firmware.
 
 ## Personal disclaimer
 
