@@ -60,11 +60,15 @@ Engineering leftovers:
 
 ## Intercom & tally
 
-The system is using an unknown UDP-based protocol for communication through a central server (source not public - installer and binaries located here: https://gitee.com/LinkPi/Service/)
+The intercom system is using an unknown UDP-based protocol on port 7000 for communication through a central server (source not public - installer and binaries located here: https://gitee.com/LinkPi/Service/). Judging by the symbols, the server is a QT app built on LinkLib. The client side runs inside the _/link/bin/Encoder_ process and utulizes LinkLib LinkIntercom interfaces 
 
-The tally system is able to utilize vMix and Sinsam (Chinese visual clone of vMix) API. 
+The tally system is able to utilize vMix and Sinsam (Chinese visual clone of vMix) APIs and the builtin UART (_/dev/ttyAMA1_) as the source of PGM/PVW signals. The documentation states, that (as of 8.04.2022) only the vMix integration is complete.
 
-Firmware analysis shows that the system relies on a specific "ttyTally" interface for the tally (a remote transmitter and a generic USB UAC soundcard
+Firmware analysis shows that the system relies on a specific "ttyTally" interface for the tally (10c4:ea60), that presents itself to the LinkPi box as _/dev/ttyUSB0_. Should work with basically any linux supported USB-UART chip (specifically with ESP/ESP32 and Arduino devices).
+
+A generic USB UAC soundcard over ALSA seems to be the source and destination as the intercom communication device (may cause trouble if both webcam and intercom were to be used). 
+
+There's a trace of 08dc:0014 USB audio device in the udev hotplug rules, but it's not clear to me if that's in any way connected to the intercom feature.
 
 ## Default passwords/backdoors
 ### SSH/telnet
