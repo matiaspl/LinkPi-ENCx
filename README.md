@@ -60,7 +60,7 @@ Engineering leftovers:
 
 ## Intercom & tally
 
-The intercom system is using an unknown UDP-based protocol on port 7000 for communication through a central server (source not public - installer and binaries located here: https://gitee.com/LinkPi/Service/). Judging by the symbols, the server is a QT app built on LinkLib. The client side runs inside the _/link/bin/Encoder_ process and utulizes LinkLib LinkIntercom interfaces 
+The intercom system (since version 20211201) is using an unknown UDP-based protocol on port 7000 for communication through a central server (source not public - installer and binaries located here: https://gitee.com/LinkPi/Service/). Judging by the symbols, the server is a QT app built on LinkLib. The client side runs inside the _/link/bin/Encoder_ process and utulizes LinkLib LinkIntercom interfaces 
 
 The tally system is able to utilize vMix and Sinsam (Chinese visual clone of vMix) APIs and the builtin UART (_/dev/ttyAMA1_) as the source of PGM/PVW signals. The documentation states, that (as of 8.04.2022) only the vMix integration is complete.
 
