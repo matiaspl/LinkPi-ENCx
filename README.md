@@ -5,7 +5,7 @@ Both devices are based on a F3520D mainboard (https://linkpi.cn/archives/870). T
 
 The base software is shared among whole line of Link Pi encoders, so ENC-Tiny (TinyENC1), ENC1, ENC1V2, ENC2, ENC5, ENC9 and ENCSH (and TBS) have the same ups and downs. 
 
-UPDATE 8.04.2022: by the looks of it TinyENC1 seems to actually have a bit different firmware with no telnet/ssh access enabled by default. If anyone's interested in getting inside those boxes consider donating one or sending me the recovery firmware.
+**UPDATE 8.04.2022**: by the looks of it TinyENC1 seems to actually have a bit different firmware with no telnet/ssh access enabled by default. If anyone's interested in getting inside those boxes consider donating one or sending me the recovery firmware.
 
 ## Personal disclaimer
 
@@ -88,16 +88,16 @@ superadmin / linkpi.com
 The superadmin account is undocumented, so it's important to either delete it by hand or at least change the password.
 
 ### Remote help
-There's a built in remote help/E.T call home feature, that establishes a tunnel connection to Link Pi server using NGROK. If you don't need it, delete the IP address from the ``$remote=`` line in /link/web/config.php and reboot.
+There's a built in remote help/E.T. call home feature, that establishes a tunnel connection to Link Pi server using NGROK. If you don't need it, delete the IP address from the ``$remote=`` line in /link/web/config.php and reboot.
 
-UPDATE May 2021: the remote management has been made publicly available. If you are a WeChat user you can acquire the bindng code at [[wx.linkpi.cn]] and pair your encoder with the provided web remote access system (open the "Options" -> "Reverse proxy" page of the encoder, paste the correct binding code, turn on the remote access function, and save). 
+**UPDATE 05.2021**: the remote management has been made publicly available. If you are a WeChat user you can acquire the bindng code at [[wx.linkpi.cn]] and pair your encoder with the provided web remote access system (open the "Options" -> "Reverse proxy" page of the encoder, paste the correct binding code, turn on the remote access function, and save). 
 
 The system is said to be in early stage of development and occasional downtime may occur.
 
 ### ONVIF
 A non-protected ONVIF service is running by default with no real way to disable it through the UI
 
-## Fixes
+## Fixes & hacks
 
 ### Add support for other HiLink/Huawei 4G dongles
 
@@ -116,6 +116,12 @@ SUBSYSTEM=="net", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14db", KERNEL=="et
 /usr/bin/usb_modeswitch -v 0x12d1 -p 0x1f01 -J
 ```
 (the usbUp.sh script just runs udhcpc on the right interface, no need to change anything there)
+
+### Create & replace the default NO SIGNAL slate image
+
+By default LinkLib uses `/link/config/nosignal.yuv` as the source of the placeholder image in case a video source for the stream is unavailable. The file is a 1920x1080 YUV420SP (or simply YUV420P) raw bitmap. To make your own convert your own 1920x1080 image with ffmpeg:
+
+ ffmpeg _yourfile_ -c:v rawvideo -pixel_format yuv420p nosignal.yuv
 
 ### Secure system accounts with empty passwords
 
