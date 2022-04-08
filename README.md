@@ -120,8 +120,9 @@ SUBSYSTEM=="net", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14db", KERNEL=="et
 ### Create & replace the default NO SIGNAL slate image
 
 By default LinkLib uses `/link/config/nosignal.yuv` as the source of the placeholder image in case a video source for the stream is unavailable. The file is a 1920x1080 YUV420SP (or simply YUV420P) raw bitmap. To make your own convert your own 1920x1080 image with ffmpeg:
-
- ffmpeg _yourfile_ -c:v rawvideo -pixel_format yuv420p nosignal.yuv
+```
+ffmpeg _yourfile_ -c:v rawvideo -pixel_format yuv420p nosignal.yuv
+```
 
 ### Secure system accounts with empty passwords
 
