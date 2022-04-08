@@ -97,6 +97,24 @@ A non-protected ONVIF service is running by default with no real way to disable 
 
 ## Fixes
 
+### Add support for other HiLink/Huawei 4G dongles
+
+Check the VID and PID of your modem, and alter accordingly:
+
+/etc/udev/rules.d/11-usb-hotplug.rules
+```
+(...)
+ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1f01",  RUN+="/etc/udev/usb4g.sh"
+SUBSYSTEM=="net", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14db", KERNEL=="eth*",  RUN+="/etc/udev/usbUp.sh %k"
+(...)
+```
+/etc/udev/usb4g.sh
+```
+#!/bin/sh
+/usr/bin/usb_modeswitch -v 0x12d1 -p 0x1f01 -J
+```
+(the usbUp.sh script just runs udhcpc on the right interface, no need to change anything there)
+
 ### Secure system accounts with empty passwords
 
 To disable the possibility of logging in without a password over telnet, change hashes for users other than root to `:x:` (for example using _vi_). You should end up with the following:
