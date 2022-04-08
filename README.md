@@ -99,7 +99,7 @@ A non-protected ONVIF service is running by default with no real way to disable 
 
 ### Add support for other HiLink/Huawei 4G dongles
 
-Check the VID and PID of your modem, and alter accordingly:
+Check the VID and PID of your modem using `lsusb`, and alter accordingly:
 
 /etc/udev/rules.d/11-usb-hotplug.rules
 ```
