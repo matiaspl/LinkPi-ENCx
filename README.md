@@ -133,7 +133,7 @@ SUBSYSTEM=="net", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14db", KERNEL=="et
 
 By default LinkLib uses `/link/config/nosignal.yuv` image as the placeholder image in case a video source is unavailable while the box is streaming. This file is a 1920x1080 raw YUV (YUV420SP or simply YUV420P) bitmap. To create a customized slate, convert your 1920x1080 image with ffmpeg like so:
 ```
-ffmpeg yourfile.png -c:v rawvideo -pix_fmt yuv420p nosignal.yuv
+ffmpeg yourfile.png -c:v rawvideo -pix_fmt nv21 nosignal.yuv
 ```
 and overwrite the original. 
 
