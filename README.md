@@ -131,7 +131,7 @@ SUBSYSTEM=="net", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14db", KERNEL=="et
 
 ### Create & replace the default NO SIGNAL slate image
 
-By default LinkLib uses `/link/config/nosignal.yuv` image as the placeholder image in case a video source is unavailable while the box is streaming. This file is a 1920x1080 raw YUV (YUV420SP or simply YUV420P) bitmap. To create a customized slate, convert your 1920x1080 image with ffmpeg like so:
+By default LinkLib uses `/link/config/nosignal.yuv` image as the placeholder image in case a video source is unavailable while the box is streaming. This file is a 1920x1080 raw semi planar 4:2:0 subsampled YUV bitmap. To create a customized slate, convert your 1920x1080 image with ffmpeg like so:
 ```
 ffmpeg yourfile.png -c:v rawvideo -pix_fmt nv21 nosignal.yuv
 ```
@@ -247,34 +247,23 @@ cat /proc/media-mem
 
 ## F3520D pinout
 
-* J1 - USB 0
- 1. +5V
- 2. USB-
- 3. USB+
- 4. GND
+* J1 - USB 0, J4 - USB 1
 
-* J4 - USB 1
- 1. +5V
- 2. USB-
- 3. USB+
- 4. GND
+| 1 | 2 | 3 | 4 |
+|---|---|---|---|
+| +5V | USB- | USB+ | GND |
 
 * P5 - VGA
- 1. +5V
- 2. NC
- 3. NC
- 4. VSync
- 5. HSync
- 6. GND
- 7. Red
- 8. Green
- 9. Blue
- 10. GND
+
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|---|---|----|
+| +5V | NC | NC | VSync | HSync | GND | Red | Green | Blue | GND |
 
 * J16 - UART 0
- 1. TX
- 2. GND
- 3. RX
+
+| 1  | 2  | 3   |
+|----|----|-----|
+| TX | GND | RX |
 
 ## Software/firmware update changlelog
 After the updates up to 20210123 some functions take effect after restarting twice. Newer versions of the firmware seem to perform the restarts automatically.
