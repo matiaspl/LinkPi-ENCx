@@ -17,6 +17,10 @@ If LinkPi guys/gals are reading this please check your emails and at least tell 
 
 It's a real pity that the Linux system underneath didn't get as much love as the UI, but a cautious linux beginner can make the device more secure in just a few steps.
 
+## Known bugs
+* USBCam streaming output freezes if the encoder is left running for longer periods of time, e.g. more than 48h. The snapshot pipeline does not seem affected at the same time.
+* Mix pipeline inputs freeze if left running for longer periods of time (e.g. more than 48h). The snapshot and streaming pipelines does not seem affected.
+
 ## Undocumented features
 ### Software
 * USBCam allows audio only streaming with a UAC device (e.g. USB microphone)
@@ -137,7 +141,7 @@ ffmpeg yourfile.png -c:v rawvideo -pix_fmt nv21 nosignal.yuv
 ```
 and overwrite the original. 
 
-### Secure system accounts with empty passwords
+### Secure empty password system accounts
 
 To disable the possibility of logging in without a password over telnet, change hashes for users other than root to `:x:` (for example using _vi_). You should end up with the following:
 
