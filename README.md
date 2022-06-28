@@ -277,11 +277,13 @@ The devices come from factory having versions of firmware not available for down
 ### update_20220518
 * Fixed the problem that NDI5 cannot decode the H265 stream of NDI4 (NDI|HX2)
 * Fixed the problem that the YouTube live broadcast was stuck
+
 *Applicable to any version after 20211201
 
 ### update_20220424
 * Upgrade to NDI5 (NDI4 users who have purchased authorization need to contact customer service to replace the authorization code)
 * Add HTTP-API interface
+
 *Applicable to any version after 20211201
 
 ### update_20211201
@@ -309,6 +311,7 @@ The devices come from factory having versions of firmware not available for down
 ### update_20210607
 * Fix the language switching problem caused by the previous version
 * Fix the MP4 recording problem caused by the previous version
+
 *Applicable to any version after 20210123
 
 ### update_20210527
