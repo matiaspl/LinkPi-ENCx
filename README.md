@@ -274,6 +274,16 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### update_20220518
+* Fixed the problem that NDI5 cannot decode the H265 stream of NDI4 (NDI|HX2)
+* Fixed the problem that the YouTube live broadcast was stuck
+*Applicable to any version after 20211201
+
+### update_20220424
+* Upgrade to NDI5 (NDI4 users who have purchased authorization need to contact customer service to replace the authorization code)
+* Add HTTP-API interface
+*Applicable to any version after 20211201
+
 ### update_20211201
 * Added support for integrated call system and Tally lights [Link to official wiki](https://gitee.com/LinkPi/Encoder/wikis/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B/%E9%9B%86%E6%88%90%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F/%E9%9B%86%E6%88%90%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0)
 * New configuration file import and export function
