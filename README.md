@@ -274,6 +274,17 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### update_20220707
+* Fixed a small probability of abnormal audio capture after restarting the device when using a usb camera
+* Fixed the problem that the audio of the USB camera could not be captured after the USB camera was plugged and unplugged
+* Fixed the problem of the increasing number of opened file handles by the Encoder program caused by an invalid srt stream
+* Fix the problem that the custom layout manager is loaded abnormally after the device is bound to wx.linkpi.cn
+* All models add HTTP API interface, optimize the URL matching rules of HTTP API
+* The login box is centered horizontally and vertically, and the fill color when the password is automatically filled in the input box is removed
+* Fix the problem with multi-NIC devices getting abnormal network status
+* The intercom function of ENC1, ENC1V2, and ENCSH models is changed to PTT
+* Fix the problem of group setting auxiliary stream
+
 ### update_20220518
 * Fixed the problem that NDI5 cannot decode the H265 stream of NDI4 (NDI|HX2)
 * Fixed the problem that the YouTube live broadcast was stuck
