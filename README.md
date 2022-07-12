@@ -72,7 +72,7 @@ Firmware analysis shows that the system relies on a specific "ttyTally" interfac
 
 A generic USB UAC soundcard over ALSA seems to be the source and destination as the intercom communication device (may cause trouble if both webcam and intercom were to be used). 
 
-There's a trace of 08dc:0014 USB audio device in the udev hotplug rules, but it's not clear to me if that's in any way connected to the intercom feature.
+As of version 20220705/20220712 there are udev hotplug rules present for USB audio devices 08dc:0014 (C-Media - Unitek Y-247A) and 12d1:0010 (unknown device with Huawei vendor id - leads me to think it's some LTE dongle with a headphone jack). Both create a symlink to /dev/headphone which very likely is used as audio IO for the intercom system.
 
 ## Default passwords/backdoors
 ### SSH/telnet
@@ -274,7 +274,7 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
-### update_20220707
+### update_20220712
 * Fixed a small probability of abnormal audio capture after restarting the device when using a usb camera
 * Fixed the problem that the audio of the USB camera could not be captured after the USB camera was plugged and unplugged
 * Fixed the problem of the increasing number of opened file handles by the Encoder program caused by an invalid srt stream
