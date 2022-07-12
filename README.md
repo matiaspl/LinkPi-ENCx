@@ -72,7 +72,7 @@ Firmware analysis shows that the system relies on a specific "ttyTally" interfac
 
 A generic USB UAC soundcard over ALSA seems to be the source and destination as the intercom communication device (may cause trouble if both webcam and intercom were to be used). 
 
-As of version 20220705/20220712 there are udev hotplug rules present for USB audio devices 08dc:0014 (C-Media - Unitek Y-247A) and 12d1:0010 (unknown device with Huawei vendor id - leads me to think it's some LTE dongle with a headphone jack). Both create a symlink to /dev/headphone which very likely is used as audio IO for the intercom system.
+As of version 20220705/20220712 there are udev hotplug rules present for USB audio devices 08dc:0014 (C-Media - Unitek Y-247A) and 12d1:0010 (unknown device with Huawei vendor id - leads me to think it's either a LTE dongle with a headphone jack or a USB-C mobile headphone). Both create a symlink to /dev/headphone which very likely is used as audio IO for the intercom system.
 
 ## Default passwords/backdoors
 ### SSH/telnet
