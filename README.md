@@ -68,7 +68,7 @@ The intercom system (since version 20211201) is using an unknown UDP-based proto
 
 The tally system is able to utilize vMix and Sinsam (Chinese visual clone of vMix) APIs and the builtin UART (_/dev/ttyAMA1_) as the source of PGM/PVW signals. The documentation states, that (as of 8.04.2022) only the vMix integration is complete.
 
-Firmware analysis shows that the system relies on a specific "ttyTally" interface for the tally (10c4:ea60), that presents itself to the LinkPi box as _/dev/ttyUSB0_. Should work with basically any linux supported USB-UART chip (specifically with ESP/ESP32 and Arduino devices).
+Firmware analysis shows that the system relies on a specific "ttyTally" interface for the tally, that presents itself to the LinkPi box as _/dev/ttyUSB0_. Should work with basically any linux supported USB-UART chip (specifically with ESP/ESP32 and Arduino devices). As of 20220712, the udev rules select 10c4:ea60 (Silicon Labs CP210x UART Bridge) as the ttyTally device.
 
 A generic USB UAC soundcard over ALSA seems to be the source and destination as the intercom communication device (may cause trouble if both webcam and intercom were to be used). 
 
