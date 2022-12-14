@@ -274,6 +274,16 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### update_20221116
+* Added online firmware search & upgrade function
+* rtsp output stream, add account password authentication function
+* Add USB disk assistant under extended function
+* Add B-frame video stream decoding compatibility
+* Fix the problem of obtaining abnormal network status when using a wifi network card
+* Optimize the intercom function
+* Add support for h265 encoding playback on the h5 player page (playing h265 encoded video streams requires high computer performance, in case of lagging problems, please change to a computer with better performance to play)
+* ENC1, ENC1V2, ENCSH models support wifi6 network card version 2.0
+
 ### update_20220712
 * Fixed a small probability of abnormal audio capture after restarting the device when using a usb camera
 * Fixed the problem that the audio of the USB camera could not be captured after the USB camera was plugged and unplugged
