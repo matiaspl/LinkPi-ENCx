@@ -409,6 +409,7 @@ The devices come from factory having versions of firmware not available for down
 * Improve the applet interface
 
 ## Links
+- https://linkpi.gitbook.io/encoder/ - Official English documentation
 - https://gitee.com/LinkPi/ - official Link Pi code repository
 - https://gitee.com/LinkPi/Encoder/wikis - official docs, good source of knowledge about the internals and firmware
 - https://linkpi.cn/archives/1388 - HTTP API ([Google translate](https://linkpi-cn.translate.goog/archives/1388?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=pl&_x_tr_pto=wapp))
