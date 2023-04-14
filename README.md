@@ -274,6 +274,17 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### update_20230322
+* On the running status page, correct the display problem of the network status uplink and downlink
+* On the encoding setting page, under the video parameter module, the function of cropping and rotating the video network stream is added, and the NTSC compatible frame rate mode is added for the HDMI/SDI channel
+* On the encoding setting page, under the audio parameter module, the audio source selection supports selecting audio from other video channels
+* On the output setting page, under the playback address module, the main stream/sub stream address (identification) custom function is added
+* System settings page, add batch export and import function of configuration files, add time zone selection function
+* Multi-platform live broadcast page, push stream newly added main stream/auxiliary stream selection function
+* By default, the no signal slate is displayed when there is no signal in the network stream, and this function can be turned on/off through the fac.php page
+* Fixed incorrect translation of some pages, and optimized other functions
+* A new experimental module is added to the menu bar, including GB28181 support, ROI coding area of interest, Insta360 camera control, Onvif PTZ control, audio and video synchronization adjustment functions (experimental function, please use it as accordingly)
+
 ### update_20221116
 * Added online firmware search & upgrade function
 * rtsp output stream, add account password authentication function
