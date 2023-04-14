@@ -156,7 +156,7 @@ netdev:x:1003:1003:Linux User,,,:/home/netdev:/bin/sh
 
 Comment the _telnetd_ line from `/etc/init.d/rcS`.
 
-### Set reasonable timezone
+### Set reasonable timezone - OUTDATED
 The device uses busybox/libc timezone management, which means you can use `/etc/TZ` for setting the correct time and date. 
 
 Refer to https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html for creating a line that fits your time zone. 
@@ -165,6 +165,8 @@ For CET/CEST (Europe/Warsaw):
 ```
 echo "CET-1CEST,M3.5.0,M10.5.0/3" > /etc/TZ
 ```
+
+UPDATE: Not needed since 20230322 - time zone can now be configured using the UI.
 
 ### Enable key-based SSH login
 Most files and folders have UID and GID 1000, some have 0, some have UID 1027 GID 100. I think it's most likely due to an incomplete build script. Due to bad ownership of most of the folders including `/root` subfolders, SSH key based login doesn't work.  
