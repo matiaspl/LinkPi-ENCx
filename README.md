@@ -276,7 +276,38 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### update_20230531
+This update only supports version 20230426 and later. For other versions, please download the full flash firmware upgrade to
+this version. If you need to downgrade, please use the corresponding version flash package. Do not directly use the upgrade package lower than 20230426 to downgrade. **Note that this upgrade will Overwrite device configuration information, please back up as needed**
+
+* Added timed enable/disable push function for live streaming on all platforms
+* Optimize the Onvif PTZ function of some models
+* Optimize integrated communication functions
+* Optimize device memory usage
+* Adjust the port status display logic on the home page
+* Fix roi setting function
+* Fixed the problem of inaccurate display of the streaming duration caused by changing the system time after the streaming is enabled
+* Corrected the problem that the buttons of the ENC1 model have a small probability of not being triggered
+* Support the new Internet-based WeChat applet, no longer rely on the LAN, and truly view it anytime, anywhere
+
+### update_20230426
+This update only supports version 20221116 and later. For other versions, please download the full flash firmware upgrade
+to this version. If you need to downgrade, please use the corresponding version of the flash package. Do not directly use the upgrade package lower than this version to downgrade. **Note this upgrade Device configuration information will be overwritten, please back it up as needed**
+
+* Fixed buffer control for B frame decoding
+* Reduced CPU usage of MP3 encoding
+* Support the latest firmware of insta360Link
+* Fixed the abnormality of superimposing special effects of network streams in some cases
+* Fixed the abnormal display of decoded illustrations under zooming, rotation, etc.
+* Fixed some network stream rotation exceptions in some models
+* Solve the issue of ipv6 domain name resolution in case of SRT
+* Replace the upgrade package/resource upload component
+* Video carousel supports decoding and re-encoding (i.e. U disk playback, streaming)
+* Added keying function in the laboratory, that is, green screen keying
+
 ### update_20230322
+**This update reportedly changes the way firmware upgrades can be made. The vendor states, that you can only go one version up at a time
+**
 * Status page - fix for displaying network uplink and downlink status
 * Encoding settings - (video parameters) added cropping and rotating the video network stream, added NTSC compatible frame rates for HDMI/SDI channel
 * Encoding settings - (audio parameters) the audio source selection supports selecting audio from other video channels
