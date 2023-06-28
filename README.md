@@ -294,6 +294,8 @@ this version. If you need to downgrade, please use the corresponding version fla
 This update only supports version 20221116 and later. For other versions, please download the full flash firmware upgrade
 to this version. If you need to downgrade, please use the corresponding version of the flash package. Do not directly use the upgrade package lower than this version to downgrade. **Note this upgrade Device configuration information will be overwritten, please back it up as needed**
 
+Notice - updating the software from 20230322 to this version softbricked my unit, I had to do a full flash upgrade to get it back.
+
 * Fixed buffer control for B frame decoding
 * Reduced CPU usage of MP3 encoding
 * Support the latest firmware of insta360Link
