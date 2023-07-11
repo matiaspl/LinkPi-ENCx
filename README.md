@@ -290,6 +290,10 @@ this version. If you need to downgrade, please use the corresponding version fla
 * Corrected the problem that the buttons of the ENC1 model have a small probability of not being triggered
 * Support the new Internet-based WeChat applet, no longer rely on the LAN, and truly view it anytime, anywhere
 
+BUGS: 
+* LCD layout config applet no longer works
+* chromakey ("green screen") function locks up from time to time
+
 ### update_20230426
 This update only supports version 20221116 and later. For other versions, please download the full flash firmware upgrade
 to this version. If you need to downgrade, please use the corresponding version of the flash package. Do not directly use the upgrade package lower than this version to downgrade. **Note this upgrade Device configuration information will be overwritten, please back it up as needed**
