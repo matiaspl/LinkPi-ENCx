@@ -276,7 +276,28 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
-### update_20230531
+### 2.4.0 build 20230731
+* Fixed the inaccurate display of disk space when mounting a mass storage device
+* ENC5V2 model - fix a small probability of abnormality when restoring the factory settings
+* SDI input supports Level B standard
+* Added remote control support for ENC1V3, ENC4SS, ENCSHV2 models add remote control support
+* Added storage mount settings under extended functions, supports nfs mount, windows shared directory mount, and disk specified partition mount
+
+BUGS: 
+* LCD layout config applet no longer works (*tested*)
+* chromakey ("green screen") function locks up from time to time (*not tested*)
+
+
+### 2.3.0 build 20230630
+* Fixed the problem of increased memory usage caused by invalid streaming addresses
+* Corrected the problem of displaying the playback address on the output settings page
+* Added the function of restoring user settings after upgrading through the upgrade package
+
+BUGS: 
+* LCD layout config applet no longer works (*tested*)
+* chromakey ("green screen") function locks up from time to time (*not tested*)
+
+### 2.2.0 build 20230531
 This update only supports version 20230426 and later. For other versions, please download the full flash firmware upgrade to
 this version. If you need to downgrade, please use the corresponding version flash package. Do not directly use the upgrade package lower than 20230426 to downgrade. **Note that this upgrade will Overwrite device configuration information, please back up as needed**
 
@@ -294,7 +315,7 @@ BUGS:
 * LCD layout config applet no longer works
 * chromakey ("green screen") function locks up from time to time
 
-### update_20230426
+### 2.1.0 build 20230426
 This update only supports version 20221116 and later. For other versions, please download the full flash firmware upgrade
 to this version. If you need to downgrade, please use the corresponding version of the flash package. Do not directly use the upgrade package lower than this version to downgrade. **Note this upgrade Device configuration information will be overwritten, please back it up as needed**
 
@@ -311,7 +332,7 @@ Notice - updating the software from 20230322 to this version softbricked my unit
 * Video carousel supports decoding and re-encoding (i.e. U disk playback, streaming)
 * Added keying function in the laboratory, that is, green screen keying
 
-### update_20230322
+### 2.0.0 build 20230322
 **This update reportedly changes the way firmware upgrades can be made. The vendor states, that you can only go one version up at a time
 **
 * Status page - fix for displaying network uplink and downlink status
@@ -324,7 +345,7 @@ Notice - updating the software from 20230322 to this version softbricked my unit
 * Fixed incorrect translation of some pages and optimized other functions
 * A new experimental module is added to the menu bar, including GB28181 support, ROI coding area of interest, Insta360 camera control, Onvif PTZ control, audio and video synchronization adjustment functions (experimental function, use with caution)
 
-### update_20221116
+### 1.0.0 build 20221116
 * Added online firmware search & upgrade function
 * rtsp output stream, add account password authentication function
 * Add USB disk assistant under extended function
