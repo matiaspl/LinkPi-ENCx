@@ -276,9 +276,31 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### build 20231031
+* Added frame synchronization settings to the encoding settings page
+* Multi-platform live broadcast page - new push compatibility settings adding the possibility to send H265 streams to YouTube
+* Optimize NTP synchronization
+* Optimize audio-only network stream encoding logic
+* System optimizations
+
+### build 20230928
+* Optimize audio-less network stream encoding logic
+* Optimize audioless USB camera encoding logic
+* Optimize device NDI encoding frame rate
+* Fixed the problem where ENC2V2 would not recognize the connected USB network card
+* Fixed the watermark scaling problem caused by switching between low-resolution streams and NOSIGNAL screens.
+
+### build 20230831
+* Fixed the abnormal problem of getting/setting watermarks in the http interface
+* Fixed the problem in SRT output where the latency could not be greater than 1000 ms
+* Optimize the 4K output quality of ENC1V3 and ENCSHV2 models
+* HDMI output adds horizontal mirroring function for ENC1V3, ENCSHV2 and ENC5V2 models
+* In the remote access page under advanced settings, a new Rtty access device method is added.
+* System optimizations
+
 ### 2.4.0 build 20230731
 * Fixed the inaccurate display of disk space when mounting a mass storage device
-* ENC5V2 model - fix a small probability of abnormality when restoring the factory settings
+* Fix a small probability of abnormality when restoring the factory settings on ENC5V2 model
 * SDI input supports Level B standard
 * Added remote control support for ENC1V3, ENC4SS, ENCSHV2 models add remote control support
 * Added storage mount settings under extended functions, supports nfs mount, windows shared directory mount, and disk specified partition mount
@@ -487,5 +509,5 @@ Notice - updating the software from 20230322 to this version softbricked my unit
 - https://gitee.com/LinkPi/Encoder/issues - bug list (I'm not sure any developer ever looked at those)
 - https://blog.csdn.net/weixin_41486034 - Chinese blog with a lot of fun ENCx use cases and ideas (most likely ran by a Link Pi developer or a tech-savvy salesperson)
 - https://linkpi.cn/archives/444 - a repost of a CSDN article on extensive ENC5 testing
-- http://wiki.endeco.xyz/ - english manual for a rebranded and secured LinkPi encoders
+- http://wiki.endeco.xyz/ - english manual for rebranded and secured LinkPi encoders (no longer operational ;( )
 
