@@ -295,14 +295,14 @@ The devices come from factory having versions of firmware not available for down
 * Fixed the problem in SRT output where the latency could not be greater than 1000 ms
 * Optimize the 4K output quality of ENC1V3 and ENCSHV2 models
 * HDMI output adds horizontal mirroring function for ENC1V3, ENCSHV2 and ENC5V2 models
-* In the remote access page under advanced settings, a new Rtty access device method is added.
+* New Rtty access device method is added in the remote access page under advanced settings
 * System optimizations
 
 ### 2.4.0 build 20230731
 * Fixed the inaccurate display of disk space when mounting a mass storage device
 * Fix a small probability of abnormality when restoring the factory settings on ENC5V2 model
-* SDI input supports Level B standard
-* Added remote control support for ENC1V3, ENC4SS, ENCSHV2 models add remote control support
+* Added Level B standard support to SDI input
+* Added remote control support for ENC1V3, ENC4SS, ENCSHV2 models
 * Added storage mount settings under extended functions, supports nfs mount, windows shared directory mount, and disk specified partition mount
 
 BUGS: 
