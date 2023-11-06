@@ -28,6 +28,7 @@ It's a real pity that the Linux system underneath didn't get as much love as the
 * since _**update_20210927**_ there's a local SRT server (SLS) in listener mode accepting connections with proper streamID. If the encoding party pushes it's stream to srt://enc1_ip:8080?streamid=push/live/XYZ and the player/decoder can connect to the stream here: srt://enc1_ip:8080?streamid=pull/live/XYZ (multiple client connections are supported. Note: SLS built in parser overwrites MPEGTS video headers with H.264 metadata, so you will have hard time playing back HEVC streams sent to SLS. Also, encyption is not supported.
 * audio sampling rate up to 96 kHz is supported (but not enabled - it can be added manually by editing the right PHP script)
 * OPUS audio codec is supported (software only and disabled by default)
+* Encoder has support for adding timestamp information to SEI video stream in-band metadata. UI mentions sinsam ([specs](https://dw.sinsam.com/sinsam/software/%E8%8A%AF%E8%B1%A1SEI%20%E5%B8%A7%E5%90%8C%E6%AD%A5%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83V1.0%20202309.pdf)) and normal (I expect this to be "regular" SEI SMPTE-12M timecodes)
 
 ### Hardware
 * the encoders can be powered with 5V using a powerbank or a USB power and a USB-A to DC 5.5x2.5mm barrel connector cable, provided they can deliver ~2 amps. (Carl Mills@EnDeCo)
@@ -277,7 +278,7 @@ After the updates up to 20210123 some functions take effect after restarting twi
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
 ### build 20231031
-* Added frame synchronization settings to the encoding settings page
+* Added frame synchronization settings ("sinsam/normal/close") to the encoding settings page
 * Multi-platform live broadcast page - new push compatibility settings adding the possibility to send H265 streams to YouTube
 * Optimize NTP synchronization
 * Optimize audio-only network stream encoding logic
