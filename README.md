@@ -7,6 +7,8 @@ The base software is shared among whole line of Link Pi encoders, so ENC-Tiny (T
 
 **UPDATE 8.04.2022**: by the looks of it TinyENC1 seems to actually have a bit different firmware with no telnet/ssh access enabled by default. If anyone's interested in getting inside those boxes consider donating one or sending me the recovery firmware.
 
+**UPDATE 9.11.2023**: The most recent boxes use a new more powerful CPU, the SS524V100 (from what I read this is a drop-in replacement for Hi35xx chips, namely the Hi3520), more RAM and even larger flash storage.
+
 ## Personal disclaimer
 
 I have no connections to the LinkPi company or their developent process. My personal opinion is that they are great devices, more capable than some of 10x as expensive known-brand encoders. It has a well planned and responsive UI. The picture and audio quality is good and everything "just works". I'm kind of used not to expect much from a $100-ish video devices, so getting my hands on and testing ENC1 was an Eureka moment ;)
