@@ -155,9 +155,16 @@ avahi:x:1002:1002:Linux User,,,:/home/avahi:/bin/sh
 netdev:x:1003:1003:Linux User,,,:/home/netdev:/bin/sh
 ```
 
-### Disable telnet daemon
+### Disable telnet daemon (OUTDATED, for recent versions look below)
 
 Comment the _telnetd_ line from `/etc/init.d/rcS`.
+
+### Disable non-secure network services (e.g. telnet, onvif)
+
+Edit /link/config/service.json (thanks to [@Gradinko](https://github.com/Gradinko)) :
+
+ /link/config # more service.json  
+ { "telnet":false, "ssh":true, "php":true, "nginx":true, "crond":true, "onvif":true, "ndi":true, "sls":true, "frp":false, "trans":false }
 
 ### Set reasonable timezone - OUTDATED
 The device uses busybox/libc timezone management, which means you can use `/etc/TZ` for setting the correct time and date. 
