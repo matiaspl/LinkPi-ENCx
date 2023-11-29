@@ -83,6 +83,7 @@ As of version 20220705/20220712 there are udev hotplug rules present for USB aud
 ```
 root / linkpi.com (Link Pi)
 root / turbosig (TBS)
+root / linkpi.cn (newer Link Pi boxes)
 ```
 
 /etc/passwd:
