@@ -287,21 +287,37 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
-### build 20231031
+### 2.9.0 build 20231229
+* Classic version: Fixed the problem that when switching the layout of the specified input source, there is a probability that the input source switch is invalid.
+* Standard Edition: Fixed the abnormal page loading problem caused by the integrated communication page not being bound to the broadcasting software.
+* Standard Edition: Fixed the problem that after setting LPH, the setting becomes invalid after switching versions.
+* Standard version: Added single-click HDMI output function to the decoding setting page
+* Remove redundant return values ​​from LPH setting watermark interface
+* Network management optimizations
+
+### 2.8.0 build 20231130
+* Optimize segment recording function
+* NTP synchronization increases timing synchronization interval
+* Fixed abnormal recording and streaming issues caused by NTP synchronization
+* Corrected the UDP packet reordering problem of ENC1V3, ENCSHV2 and other models
+* Fixed the problem that the number of channels with special effects cannot exceed 8
+* Following a change to ENCSH models, a new management UI has been added. "Classic" (original) and "standard" (new) versions are available
+
+### 2.7.0 build 20231031
 * Added frame synchronization settings ("sinsam/normal/close") to the encoding settings page
 * Multi-platform live broadcast page - new push compatibility settings adding the possibility to send H265 streams to YouTube
 * Optimize NTP synchronization
 * Optimize audio-only network stream encoding logic
 * System optimizations
 
-### build 20230928
+### 2.6.0 build 20230928
 * Optimize audio-less network stream encoding logic
 * Optimize audioless USB camera encoding logic
 * Optimize device NDI encoding frame rate
 * Fixed the problem where ENC2V2 would not recognize the connected USB network card
 * Fixed the watermark scaling problem caused by switching between low-resolution streams and NOSIGNAL screens.
 
-### build 20230831
+### 2.5.0 build 20230831
 * Fixed the abnormal problem of getting/setting watermarks in the http interface
 * Fixed the problem in SRT output where the latency could not be greater than 1000 ms
 * Optimize the 4K output quality of ENC1V3 and ENCSHV2 models
