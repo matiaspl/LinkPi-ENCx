@@ -119,6 +119,22 @@ A non-protected ONVIF service is running by default with no real way to disable 
 
 ## Fixes & hacks
 
+### Recovering from a bad firmware update 
+
+Full flash packages differ from the upgrade packages. Upgrades are basically .tar files that - generally speaking - include the files that changed since the last firmware version, and full flash are partition images. You need to grab the one for your device from the following link: 
+ https://gitee.com/LinkPi/Encoder/wikis/%E5%8D%87%E7%BA%A7&%E5%88%B7%E6%9C%BA/%E5%88%B7%E6%9C%BA%E5%8C%85 
+and follow the instructions below:
+
+1. Prepare a USB pendrive, format it as FAT32, single partition (with no hidden partitions)
+2. Unzip all the flashing packages of the corresponding model to the root directory of the USB disk
+3. When the encoder is powered off, insert the USB disk into the USB port of the encoder
+4. Press and hold the 'DEF' button of the encoder (with a toothpick) and turn on the encoder power
+5. Release the DEF button after you see 'UPDATING' on the OLED screen or 'System Updating' on the HDMI screen
+6. Wait for the firmware flashing to complete (the logo appears on the OLED screen or the logo appears on the HDMI screen)
+7. After the system is flashed, the default IP will be restored (192.168.1.217) which corresponds to the flashing package of multiple models. You need to manually visit http://192.168.1.217/fac.php - after logging in select and confirm appropriate model. Restart after you're done.
+
+If you have problems navigating LinkPi gitee repositories Chrome's built-in translation engine does a very good job.
+
 ### Add support for other HiLink/Huawei 4G dongles
 
 Check the VID and PID of your modem using `lsusb`, and alter accordingly:
