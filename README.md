@@ -303,6 +303,16 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### 3.0.0 build 20240131
+* Standard Edition: Fixed some page translation issues
+* Standard Edition: Fixed the problem of unsuccessful NDI registration
+* Standard Edition: Added title keyword search function
+* Added video channel to audio source binding in the layout manager (*can't verify - I don't see this option*)
+* Fixed the problem that NTFS formatted hard disk cannot be automatically mounted
+* Optimize some HTTP interface logic
+* Optimize file recording function
+* Kernel optimization for better UDP stability (ENC1V3, ENCSHV2, ENC4S models only)
+
 ### 2.9.0 build 20231229
 * Classic version: Fixed the problem that when switching the layout of the specified input source, there is a probability that the input source switch is invalid.
 * Standard Edition: Fixed the abnormal page loading problem caused by the integrated communication page not being bound to the broadcasting software.
