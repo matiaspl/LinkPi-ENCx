@@ -307,7 +307,7 @@ The devices come from factory having versions of firmware not available for down
 * Standard Edition: Fixed some page translation issues
 * Standard Edition: Fixed the problem of unsuccessful NDI registration
 * Standard Edition: Added title keyword search function
-* Added video channel to audio source binding in the layout manager (*can't verify - I don't see this option*)
+* Added video channel to audio source binding in the layout manager (*I don't see this option in the layout manager, but the Encoder settings Audio tab has a wider set of audio sources available than it had some time ago...*)
 * Fixed the problem that NTFS formatted hard disk cannot be automatically mounted
 * Optimize some HTTP interface logic
 * Optimize file recording function
