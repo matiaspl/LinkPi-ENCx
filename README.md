@@ -39,7 +39,7 @@ It's a real pity that the Linux system underneath didn't get as much love as the
 ## 3rd party apps
 
 Statically compiled armhf applications seem to work fine. I tried ffmpeg and v4l2-ctl and they both worked. 
-
+* LinkPi-oled-logo-converter: https://github.com/YveIce/LinkPi-oled-logo-converter - tool for converting your graphics to OLED boot logo format
 * ffmpeg: https://johnvansickle.com/ffmpeg/ 
 * v4l2-ctl: https://github.com/9crk/v4l2-ctl - there's a v4l2-ctl.exe file in this repo which is a static armhf binary 
 * v4l2ctl-ctl-with-php: https://github.com/wilwad/v4l2-ctl-with-php - allows remote control of USB webcams params (brightness/contrast/backlight, etc.)
