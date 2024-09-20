@@ -303,6 +303,36 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### 3.4.0 build 20240831
+* Decoding settings page supports multiple NDI stream decoding output
+* Adjust the interactive logic of live streaming page, add WebRTC streaming function
+* Video special effects page supports video stream preview (reqires enabling RTMP or WebRTC streams)
+* Fixed a rare problem of not being able to scan the onvif stream output by the device
+* Optimize the theme function, add the function of setting the main color tone
+
+### 3.3.0 build 20240731
+* SRT tab added to the Decoding page
+* Added the output of ultra low latency WebRTC preview (when enabled it's available in the H5 player)
+* Added one-click stream URL copying in the Streaming output page
+* DHCP optimizations
+
+### 3.2.0 build 20240531
+* Standard version: decoding settings page adds the function of receiving rtmp streaming, supports authentication streaming
+* Fix for ENCSHV2 model for an issue with WIFI being turned on by default when it is first started after flashing
+* Optimize frame synchronization function
+
+### 3.1.0 build 20240430
+* Standard Edition: Modify the interactive logic of the title search box, and no longer pop up the search box
+* Standard Edition: Title search function, add search result keyword highlighting
+* Standard Edition: Remove the network input option on the encoding page, and set the network input on the decoding page
+* Standard Edition: Correct the problem that there is still a probability of automatically obtaining IP after turning off DHCP in the network settings
+* Standard Edition: Fully compatible with preview effects of various resolutions such as vertical screen
+* Standard Edition: New remote control interaction logic, the remote control is only supported on some models
+* Standard Edition: Correct the problem that some models do not have a 4K option on the encoding setting page
+* Standard Edition: Optimize some Http interface logic
+* Classic Edition: Correct the problem that there is a probability that the video channel cannot be cut in when switching the layout on the video mixing page
+* Custom layout manager, support vertical screen and various custom resolution display
+
 ### 3.0.0 build 20240131
 * Standard Edition: Fixed some page translation issues
 * Standard Edition: Fixed the problem of unsuccessful NDI registration
