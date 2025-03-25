@@ -1,5 +1,5 @@
 # Link Pi ENC1 / TBS 2603SE encoders
-Both devices are based on a F3520D mainboard (https://linkpi.cn/archives/870). The TBS however lacks the F3520D_EX2 addon board (so no connectors for HDMI out, analog audio input/output, USB socket, buttons and serial port header, software however supports all of those features).
+Both devices are based on a F3520D mainboard (https://linkpi.cn/archives/870). The TBS however lacks the F3520D_EX2 addon board (so no connectors for HDMI out, analog audio input/output, USB socket, buttons and serial port header - software supports all of those features).
 
 ![F3520D with EX2 extension board](https://linkpi.cn/wp-content/uploads/2020/06/ef0b8c93641ae54-1.png)
 
@@ -7,7 +7,7 @@ The base software is shared among whole line of Link Pi encoders, so ENC-Tiny (T
 
 **UPDATE 8.04.2022**: by the looks of it TinyENC1 seems to actually have a bit different firmware with no telnet/ssh access enabled by default. If anyone's interested in getting inside those boxes consider donating one or sending me the recovery firmware.
 
-**UPDATE 9.11.2023**: The most recent boxes use a new more powerful CPU, the SS524V100 (from what I read this is a drop-in replacement for Hi35xx chips, namely the Hi3520), more RAM and even larger flash storage.
+**UPDATE 9.11.2023**: The most recent boxes use a new more powerful CPU, the SS5248V100 (from what I read this is a drop-in replacement for Hi35xx chips, namely the Hi3520), more RAM and even larger flash storage.
 
 ## Personal disclaimer
 
@@ -303,6 +303,36 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### 4.0.0 build 20250228
+This update only supports versions 20240131 and later. Do not directly use the upgrade package lower than version 20230426 to downgrade.
+* Remove the classic version webpage and related configurations for all models
+* Optimize the log feature memory usage
+* Optimize the decoding logic of video-only network streams
+* Remove the insta360 link from the Laboratory page
+* Add a USB camera page to the laboratory, compatible with insta360 control
+* Correct the problem of inaccurate acquisition of reserved space for some USB disks when using loop recording
+* Correct the problem of discontinuous file names displayed on the [File Management-Loop Recording] tab on the file recording page
+* Remove the AUD and BR status display from the OLED display, and add the recording (REC) and push streaming (PUSH) status display
+
+### 3.6.0 build 20241231
+This update only supports versions 20240131 and later. Do not directly use the upgrade package lower than version 20230426 to downgrade.
+* System log viewing/downloading added to Laboratory page.
+* Line Output control has been added to the interface output page.
+* AAC-HE encoding has been added to the encoding settings page for audio encoding.
+* Loop recording, segmented recording, power-on recording and other functions have been added to the file recording page.
+* Corrected the problem that audio mp3 encoding does not work.
+* Optimized the scaling and performance issues of watermark effects.
+* Modified some page text descriptions
+
+### 3.5.0 build 20241031
+This update only supports versions 20240131 and later. Do not directly use the upgrade package lower than version 20230426 to downgrade
+* New OLED screen button interaction
+* Fixed the problem that the menu button does not display on small scrrens
+* On the live streaming page, fix the problem that there is a probability that the streaming preview cannot be viewed after clicking the save button during streaming
+* On the H5 player page, add the function of creating a full-screen playback shortcut for the specified channel
+* Optimize the decoding of network streams containing B frames
+* Low-level system optimizations
+
 ### 3.4.0 build 20240831
 * Decoding settings page supports multiple NDI stream decoding output
 * Adjust the interactive logic of live streaming page, add WebRTC streaming function
@@ -403,8 +433,7 @@ BUGS:
 * chromakey ("green screen") function locks up from time to time (*not tested*)
 
 ### 2.2.0 build 20230531
-This update only supports version 20230426 and later. For other versions, please download the full flash firmware upgrade to
-this version. If you need to downgrade, please use the corresponding version flash package. Do not directly use the upgrade package lower than 20230426 to downgrade. **Note that this upgrade will Overwrite device configuration information, please back up as needed**
+This update only supports version 20230426 and later. For other versions, please download the full flash firmware upgrade to this version. If you need to downgrade, please use the corresponding version flash package. Do not directly use the upgrade package lower than 20230426 to downgrade. **Note that this upgrade will Overwrite device configuration information, please back up as needed**
 
 * Added timed enable/disable push function for live streaming on all platforms
 * Optimize the Onvif PTZ function of some models
@@ -585,7 +614,10 @@ Notice - updating the software from 20230322 to this version softbricked my unit
 * Improve the applet interface
 
 ## Links
-- https://linkpi.gitbook.io/encoder/ - Official English documentation
+- https://www.yuque.com/linkpi/encoder/ - Official English documentation
+- https://linkpi.gitbook.io/encoder/ - old official English documentation
+- https://www.yuque.com/linkpi/encoder/pkfir2g98gwpzymt - upgrade firmware repository
+- https://www.yuque.com/linkpi/encoder/kpvg3mbg5ussrx69 - boot ("full flash") firmware repository
 - https://gitee.com/LinkPi/ - official Link Pi code repository
 - https://gitee.com/LinkPi/Encoder/wikis - official docs, good source of knowledge about the internals and firmware
 - https://linkpi.cn/archives/1388 - HTTP API ([Google translate](https://linkpi-cn.translate.goog/archives/1388?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=pl&_x_tr_pto=wapp))
@@ -593,4 +625,4 @@ Notice - updating the software from 20230322 to this version softbricked my unit
 - https://blog.csdn.net/weixin_41486034 - Chinese blog with a lot of fun ENCx use cases and ideas (most likely ran by a Link Pi developer or a tech-savvy salesperson)
 - https://linkpi.cn/archives/444 - a repost of a CSDN article on extensive ENC5 testing
 - http://wiki.endeco.xyz/ - english manual for rebranded and secured LinkPi encoders (no longer operational ;( )
-
+  
