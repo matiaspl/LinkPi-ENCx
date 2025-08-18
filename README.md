@@ -303,6 +303,33 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### 4.2.2	build 20250630
+This update will overwrite the configuration information on the [Streaming] page. Please back up your streaming information in advance.
+* Optimized the stability of Wi-Fi network cards for ENC5V2, ENC2V3, and ENC8
+* Fixed an issue where the RTSP stream for the channel could not be obtained via ONVIF when the encoding resolution was set to auto
+* Fixed an issue with abnormal audio output on the second HDMI output of the ENC4
+* Fixed an issue with low Line Output volume on the MiniEnc1 model
+* Added a new [Interface Input] page, including controls for HDMI/SDI/VGA, USB, and Line In. Line In also added noise reduction and gain controls
+* Removed the [USB Camera] page from the Lab and integrated its functionality into the [Input] page
+* Removed the Video Parameters tab from the [Encode] page and integrated it into the [Input] page and the Rotate/Crop tab on the [Decode] page
+* Added support for removing Line In audio from the Mix channel mix
+* New interaction logic for [Stream] allows you to specify audio and video sources for each streaming channel
+
+### 4.1.3 build 20250430
+* Fixed an issue where the scanned NDI stream and device IP address didn't match
+* Removed the invalid network port display on the ENC2V2 model page
+* Changed the default EDID for ENC8 and ENCMini models to 1080p
+* Fixed an issue where setting a timer for streaming didn't work
+* Fixed an issue where remote assistance couldn't be enabled on ENCMini models
+* Fixed an issue where SSH login couldn't be enabled on ENCMini models
+* New MAC address management mechanism
+* Added a custom channel to the RTSP tab on the stream output page to enable Onvif output
+* Optimized memory usage for ENCMini models
+* Optimized Onvif output
+* Optimized WebRTC protocol streaming
+* Optimized stability for connecting to the TallyArbiter service
+* Optimized device startup speed
+
 ### 4.0.0 build 20250228
 This update only supports versions 20240131 and later. Do not directly use the upgrade package lower than version 20230426 to downgrade.
 * Remove the classic version webpage and related configurations for all models
@@ -316,12 +343,12 @@ This update only supports versions 20240131 and later. Do not directly use the u
 
 ### 3.6.0 build 20241231
 This update only supports versions 20240131 and later. Do not directly use the upgrade package lower than version 20230426 to downgrade.
-* System log viewing/downloading added to Laboratory page.
-* Line Output control has been added to the interface output page.
-* AAC-HE encoding has been added to the encoding settings page for audio encoding.
+* System log viewing/downloading added to Laboratory page
+* Line Output control has been added to the interface output page
+* AAC-HE encoding has been added to the encoding settings page for audio encoding
 * Loop recording, segmented recording, power-on recording and other functions have been added to the file recording page.
-* Corrected the problem that audio mp3 encoding does not work.
-* Optimized the scaling and performance issues of watermark effects.
+* Corrected the problem that audio mp3 encoding does not work
+* Optimized the scaling and performance issues of watermark effects
 * Modified some page text descriptions
 
 ### 3.5.0 build 20241031
