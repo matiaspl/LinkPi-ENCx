@@ -303,6 +303,16 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices come from factory having versions of firmware not available for download (e.g. 20201111)
 
+### 4.3.2 build 20250831
+* Fixed an issue where the remote control wouldn't trigger on the ENCS1 model
+* Fixed an issue with abnormal SDI output at certain resolutions on the ENC4S model
+* Optimized the stability of NTP time synchronization
+* Optimized connection stability for the GB28181 platform
+* Optimized the preview of H265 encoded video streams on the [Push] page
+* Added RIST protocol stream output to the [Streaming] page
+* Added a [Carousel] page with support for automatic rotation of single and multi-view layout (this feature is not supported on the MINI model)
+* RPC service upgrade
+
 ### 4.2.2	build 20250630
 This update will overwrite the configuration information on the [Streaming] page. Please back up your streaming information in advance.
 * Optimized the stability of Wi-Fi network cards for ENC5V2, ENC2V3, and ENC8
