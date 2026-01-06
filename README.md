@@ -301,9 +301,31 @@ cat /proc/media-mem
 | TX | GND | RX |
 
 ## Software/firmware update changlelog
+Note: The following descriptions are slightly redacted release notes translated from Chinese using Google Translate. 
+
 After the updates up to 20210123 some functions take effect after restarting twice. Newer versions of the firmware seem to perform the restarts automatically.
 
-The devices come from factory having versions of firmware not available for download (e.g. 20201111)
+The devices might come from factory having firmware versions that are not available for download (e.g. 20201111).
+
+### 4.4.1	build 20251130
+This update has the following impact on previous features:
+* For versions 20250228 and earlier, updating this firmware will disable the frp service. 
+* For systems with versions less than 20250630, directly updating this firmware will overwrite the configuration information on the "Live Streaming" page; please back up your streaming information beforehand. 
+* Updating this firmware will disable the infrared RC; please manually access the remote control configuration page and enable it. A second remote control is now supported; you need to select the proper one on the "Infrared Remote Control" page. The remote control function is disabled by default.
+
+Other changes:
+
+* On the [Input} page, the UI for the USB Camera has been adjusted for better consistency with other pages
+* Under Extended Functions, a [Serial Control] page has been added, allowing you to operate devices via serial port
+* The original "Serial Port, Button" page under Extended Functions has been renamed to [Serial Server] for better alignment with the page's functionality
+* The [Carousel] page has been moved to Extended Functions
+* Fixed the issue of increased memory usage due to frequent plugging and unplugging of device input interfaces. 
+* Optimized line audio input (active noise reduction) 
+* Optimized device stability for receiving SRT streams
+* Fixed an issue where AAC audio encoding with extension could not be decoded correctly
+* Fixed an issue where decoding NDI streams using buffered mode was ineffective
+* Fixed an issue with abnormal loading of WeChat mini-programs; 
+* Added IPv6 support for all models
 
 ### 4.3.2 build 20250831
 * Fixed an issue where the remote control wouldn't trigger on the ENCS1 model
