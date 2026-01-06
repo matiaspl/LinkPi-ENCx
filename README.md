@@ -26,7 +26,7 @@ It's a real pity that the Linux system underneath didn't get as much love as the
 ## Undocumented features
 ### Software
 * USBCam allows audio only streaming with a UAC device (e.g. USB microphone)
-* internal RTMP server accepts connections from outside using rtmp://enc1_ip/live playpath and any stream key (avoid stream* and sub* keys - they are used internally)
+* internal RTMP server accepts connections from outside using rtmp://enc1_ip/live playpath and any stream key (avoid stream* and sub* keys - they are used internally), so it can be used as a relay
 * since _**update_20210927**_ there's a local SRT server (SLS) in listener mode accepting connections with proper streamID. If the encoding party pushes it's stream to srt://enc1_ip:8080?streamid=push/live/XYZ and the player/decoder can connect to the stream here: srt://enc1_ip:8080?streamid=pull/live/XYZ (multiple client connections are supported. 
 
 Note: SLS's built in parser overwrites MPEGTS video headers with H.264 metadata, so you will have hard time playing back HEVC streams sent to SLS. Also, encyption is not supported.
@@ -46,14 +46,11 @@ Statically compiled armhf applications seem to work fine. I tried ffmpeg and v4l
 * v4l2-ctl: https://github.com/9crk/v4l2-ctl - there's a v4l2-ctl.exe file in this repo which is a static armhf binary 
 * v4l2ctl-ctl-with-php: https://github.com/wilwad/v4l2-ctl-with-php - allows remote control of USB webcams params (brightness/contrast/backlight, etc.)
 
-## Interesting internal pages (not linked/unused/model-specific) 
+## Interesting internal pages (not linked) 
 
-* http://enc1/test.html - possibly a QA leftover, allows unauthorised slideshow view of all inputs
+Some of the mentioned pages might no longer be available as the frontend has been significantly cleaned up during UI revamp.
 * http://enc1/fac.php - _low level factory settings_ (also uses oled.php, themes.php and remote.php)
 * http://enc1/ndireg.php - for entering the NDI license string (sold separately)
-* http://enc1/remote.php and http://enc1/remotelp.php - IR remote configuration (supported on ENC1V2)
-* http://enc1/monitor.php - motion detection
-* http://enc1/face.php - face recognition
 
 Engineering leftovers:
 
@@ -66,10 +63,13 @@ Engineering leftovers:
 * http://enc1/demo/timer.html - javascript timer, helpful for latency measurement
 * http://enc1/demo/demo.html - face recognition, not working
 * http://enc1/wxfunc.php - possibly a part of an old backend, allows non authorised changes
+* http://enc1/test.html - possibly a QA leftover, allows unauthorised slideshow view of all inputs
+* http://enc1/monitor.php - motion detection
+* http://enc1/face.php - face recognition
 
 ## Intercom & tally
 
-The intercom system (since version 20211201) is using an unknown UDP-based protocol on port 7000 for communication through a central server (source not public - installer and binaries located here: https://gitee.com/LinkPi/Service/). Judging by the symbols, the server is a QT app built on LinkLib. The client side runs inside the _/link/bin/Encoder_ process and utulizes LinkLib LinkIntercom interfaces 
+The intercom system (since version 20211201) is using an unknown UDP-based protocol on port 7000 for communication through a central server (source not public - installer and binaries located here: https://gitee.com/LinkPi/Service/). Judging by the symbols, the server is a QT app built on LinkLib. The client side runs inside the _/link/bin/Encoder_ process and utilizes LinkLib LinkIntercom interfaces 
 
 The tally system is able to utilize vMix and Sinsam (Chinese visual clone of vMix) APIs and the builtin UART (_/dev/ttyAMA1_) as the source of PGM/PVW signals sent downstream. The documentation states, that (as of 8.04.2022) only the vMix integration is complete.
 
@@ -127,7 +127,7 @@ Full flash packages differ from the upgrade packages. Upgrades are basically .ta
  https://gitee.com/LinkPi/Encoder/wikis/%E5%8D%87%E7%BA%A7&%E5%88%B7%E6%9C%BA/%E5%88%B7%E6%9C%BA%E5%8C%85 
 and follow the instructions below:
 
-1. Prepare a USB pendrive, format it as FAT32, single partition (with no hidden partitions)
+1. Prepare a USB pendrive, format it as FAT32, single partition (with no hidden partitions) (I recommend using one with an activity LED - makes time spent in points 5-6 more bearable)
 2. Unzip all the flashing packages of the corresponding model to the root directory of the USB disk
 3. When the encoder is powered off, insert the USB disk into the USB port of the encoder
 4. Press and hold the 'DEF' button of the encoder (with a toothpick) and turn on the encoder power
@@ -300,7 +300,7 @@ cat /proc/media-mem
 |----|----|-----|
 | TX | GND | RX |
 
-## Software/firmware update changlelog
+## Software/firmware update changelog
 Note: The following descriptions are slightly redacted release notes translated from Chinese using Google Translate. 
 
 After the updates up to 20210123 some functions take effect after restarting twice. Newer versions of the firmware seem to perform the restarts automatically.
@@ -315,7 +315,7 @@ This update has the following impact on previous features:
 
 Other changes:
 
-* On the [Input} page, the UI for the USB Camera has been adjusted for better consistency with other pages
+* On the [Input] page, the UI for the USB Camera has been adjusted for better consistency with other pages
 * Under Extended Functions, a [Serial Control] page has been added, allowing you to operate devices via serial port
 * The original "Serial Port, Button" page under Extended Functions has been renamed to [Serial Server] for better alignment with the page's functionality
 * The [Carousel] page has been moved to Extended Functions
