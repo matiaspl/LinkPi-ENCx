@@ -319,12 +319,13 @@ Other changes:
 * Under Extended Functions, a [Serial Control] page has been added, allowing you to operate devices via serial port
 * The original "Serial Port, Button" page under Extended Functions has been renamed to [Serial Server] for better alignment with the page's functionality
 * The [Carousel] page has been moved to Extended Functions
+* Optimized memory usage when using two USB cameras simultaneously on the UVC2 device
 * Fixed the issue of increased memory usage due to frequent plugging and unplugging of device input interfaces. 
 * Optimized line audio input (active noise reduction) 
 * Optimized device stability for receiving SRT streams
-* Fixed an issue where AAC audio encoding with extension could not be decoded correctly
-* Fixed an issue where decoding NDI streams using buffered mode was ineffective
-* Fixed an issue with abnormal loading of WeChat mini-programs; 
+* Fixed an issue where AAC audio streams with extensions would not decode correctly
+* Fixed an issue where decoding NDI streams using buffered mode would fail
+* Fixed an issue with abnormal loading of WeChat mini-programs 
 * Added IPv6 support for all models
 
 ### 4.3.2 build 20250831
