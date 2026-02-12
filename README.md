@@ -307,6 +307,15 @@ After the updates up to 20210123 some functions take effect after restarting twi
 
 The devices might come from factory having firmware versions that are not available for download (e.g. 20201111).
 
+### 5.0.0	build 20260130
+* Fixed SLS service memory usage issue
+* Added support for TRTC streaming ([Tencent RTC](https://console.cloud.tencent.com/trtc)) to SS524V100 series devices.
+* Optimized USB camera audio/video capture and reconnection functions.
+* Optimized SRT stream decoding for HI3520DV400, HI3521DV100, and HI3531DV100 series devices.
+* Optimized RPC service. A brand-new development mode supports developing device audio/video applications via JavaScript ([LinkJS](https://www.yuque.com/linkpi/linkjs)), supporting SS524, SS528, and SS928 series devices.
+
+Note: This new development mode requires flashing the firmware - it is not included in the upgrade package. Development mode then needs to be enabled through the facory setup (fac.php) URL.
+
 ### 4.4.1	build 20251130
 This update has the following impact on previous features:
 * For versions 20250228 and earlier, updating this firmware will disable the frp service. 
@@ -680,6 +689,7 @@ Notice - updating the software from 20230322 to this version softbricked my unit
 - https://linkpi.gitbook.io/encoder/ - old official English documentation
 - https://www.yuque.com/linkpi/encoder/pkfir2g98gwpzymt - upgrade firmware repository
 - https://www.yuque.com/linkpi/encoder/kpvg3mbg5ussrx69 - boot ("full flash") firmware repository
+- https://www.yuque.com/linkpi/linkjs/ - LinkJS development documentation
 - https://gitee.com/LinkPi/ - official Link Pi code repository
 - https://gitee.com/LinkPi/Encoder/wikis - official docs, good source of knowledge about the internals and firmware
 - https://linkpi.cn/archives/1388 - HTTP API ([Google translate](https://linkpi-cn.translate.goog/archives/1388?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=pl&_x_tr_pto=wapp))
