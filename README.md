@@ -308,6 +308,8 @@ After the updates up to 20210123 some functions take effect after restarting twi
 The devices might come from factory having firmware versions that are not available for download (e.g. 20201111).
 
 ### 5.0.0	build 20260130
+**Warning: the update broke the Intercom page on my ENC1V1**
+
 * Fixed SLS service memory usage issue
 * Added support for TRTC streaming ([Tencent RTC](https://console.cloud.tencent.com/trtc)) to SS524V100 series devices.
 * Optimized USB camera audio/video capture and reconnection functions.
@@ -504,7 +506,7 @@ BUGS:
 * chromakey ("green screen") function locks up from time to time (*not tested*)
 
 ### 2.2.0 build 20230531
-This update only supports version 20230426 and later. For other versions, please download the full flash firmware upgrade to this version. If you need to downgrade, please use the corresponding version flash package. Do not directly use the upgrade package lower than 20230426 to downgrade. **Note that this upgrade will Overwrite device configuration information, please back up as needed**
+This update only supports version 20230426 and later. For other versions, please download the full flash firmware upgrade to this version. If you need to downgrade, please use the corresponding version flash package. Do not directly use the upgrade package lower than 20230426 to downgrade. **Note that this upgrade will overwrite device configuration information, please back up as needed**
 
 * Added timed enable/disable push function for live streaming on all platforms
 * Optimize the Onvif PTZ function of some models
