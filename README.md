@@ -306,11 +306,18 @@ Note: The following descriptions are slightly redacted release notes translated 
 After the updates up to 20210123 some functions take effect after restarting twice. Newer versions of the firmware seem to perform the restarts automatically.
 
 The devices might come from factory having firmware versions that are not available for download (e.g. 20201111).
+### 5.1.0	build 20260331
+* Added USB microphone control.
+* Optimized 4K HDMI signal input.
+* Added ES6 syntax support to the JS Script engine.
+* S version Encoder (LinkJS?) development is complete; welcome to switch to development mode for testing (currently in beta).
+
+Note: The new development mode requires flashing the firmware to experience; this part is not included in the upgrade package.
 
 ### 5.0.0	build 20260130
 **Warning: the update broke the Intercom page on my ENC1V1**
 
-* Fixed SLS service memory usage issue
+* Fixed SLS service memory usage issue.
 * Added support for TRTC streaming ([Tencent RTC](https://console.cloud.tencent.com/trtc)) to SS524V100 series devices.
 * Optimized USB camera audio/video capture and reconnection functions.
 * Optimized SRT stream decoding for HI3520DV400, HI3521DV100, and HI3531DV100 series devices.
