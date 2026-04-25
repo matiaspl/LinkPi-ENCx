@@ -25,7 +25,7 @@ It's a real pity that the Linux system underneath didn't get as much love as the
 
 ## Undocumented features
 ### Software
-* USBCam allows audio only streaming with a UAC device (e.g. USB microphone)
+* ~~USBCam allows audio only streaming with a UAC device (e.g. USB microphone)~~ (official support for USB Audio since 5.1.0)
 * internal RTMP server accepts connections from outside using rtmp://enc1_ip/live playpath and any stream key (avoid stream* and sub* keys - they are used internally), so it can be used as a relay
 * since _**update_20210927**_ there's a local SRT server (SLS) in listener mode accepting connections with proper streamID. If the encoding party pushes it's stream to srt://enc1_ip:8080?streamid=push/live/XYZ and the player/decoder can connect to the stream here: srt://enc1_ip:8080?streamid=pull/live/XYZ (multiple client connections are supported. 
 
