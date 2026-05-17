@@ -1,21 +1,19 @@
-# Link Pi ENC1 / TBS 2603SE encoders
-Both devices are based on a F3520D mainboard (https://linkpi.cn/archives/870). The TBS however lacks the F3520D_EX2 addon board (so no connectors for HDMI out, analog audio input/output, USB socket, buttons and serial port header - software supports all of those features).
-
+# Link Pi ENCx encoders
 ![F3520D with EX2 extension board](https://linkpi.cn/wp-content/uploads/2020/06/ef0b8c93641ae54-1.png)
 
-The base software is shared among whole line of Link Pi encoders, so ENC-Tiny (TinyENC1), ENC1, ENC1V2, ENC2, ENC5, ENC9 and ENCSH (and TBS) have the same ups and downs. 
+This repository started in early 2021 to document my personal reverse engineering efforts. At that time at my workplace we just bought a TBS 2603SE encoder which - incidentally - happened to be based on the same hardware platform as ENC1 that I bought out of curiosity. I found out that both devices were based on a F3520D mainboard (https://linkpi.cn/archives/870), and that's how it all started.
 
-**UPDATE 8.04.2022**: by the looks of it TinyENC1 seems to actually have a bit different firmware with no telnet/ssh access enabled by default. If anyone's interested in getting inside those boxes consider donating one or sending me the recovery firmware.
+It happened that the base software (firmware) was - and still is - shared among whole line of Link Pi encoders, so ENC-Tiny (TinyENC1), ENC1, ENC1V2, ENC2, ENC5, ENC9 and ENCSH (and TBS) have the same ups and downs so the knowledge I gathered became useful to a quite large community. 
 
-**UPDATE 9.11.2023**: The most recent boxes use a new more powerful CPU, the SS5248V100 (from what I read this is a drop-in replacement for Hi35xx chips, namely the Hi3520), more RAM and even larger flash storage.
+Since then this site became a de-facto place where people come to look for help and information on LinkPi's encoders that the vendor isnt't providing in its' official docs or provides it only in Chinese, which makes it ungooglable. 
+
+# Community
+The [issue tracker](https://github.com/matiaspl/LinkPi-ENCx/issues) is the place you can ask for help and hope the community of LinkPi users (or me) jumps in.
 
 ## Personal disclaimer
-
 I have no connections to the LinkPi company or their developent process. My personal opinion is that they are great devices, more capable than some of 10x as expensive known-brand encoders. It has a well planned and responsive UI. The picture and audio quality is good and everything "just works". I'm kind of used not to expect much from a $100-ish video devices, so getting my hands on and testing ENC1 was an Eureka moment ;)
 
 I tried contacting Link Pi (both dev and sales) about the security issues but unfortunately got no response, that's why I decided to write about all potential and real problems here. 
-
-If LinkPi guys/gals are reading this please check your emails and at least tell me to bugger off ;)
 
 It's a real pity that the Linux system underneath didn't get as much love as the UI, but a cautious linux beginner can make the device more secure in just a few steps.
 
@@ -35,11 +33,28 @@ Note: SLS's built in parser overwrites MPEGTS video headers with H.264 metadata,
 * As of [20231031](https://github.com/matiaspl/LinkPi-ENCx/edit/main/README.md#build-20231031) the encoder has support for adding timestamp information to SEI video stream in-band metadata. UI mentions sinsam ([specs](https://dw.sinsam.com/sinsam/software/%E8%8A%AF%E8%B1%A1SEI%20%E5%B8%A7%E5%90%8C%E6%AD%A5%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83V1.0%20202309.pdf)) and normal (~~I expect this to be "regular" SEI SMPTE-12M timecodes~~ same as sinsam alas not per packet but per GOP - tough luck...)
 
 ### Hardware
+| Model | CPU |
+|---|---|
+| MINI	| HI3516CV610	|
+| ENC1,ENC1V2, TBS 2603SE |	HI3520DV400	|
+| ENCSH	| HI3521DV100	|
+| ENC2, ENC5, ENC9 | 	HI3531DV100	|
+| ENC5, ENC9	| HI3531DV100	|
+| ENC2V2, ENC4 |	HI3531DV200 |
+| ENC1V3, ENCS1, ENC4S, ENCSHV2, REC1, VGA1, UVC2	| SS524V100 |
+| ENC2V2, ENC2V3, ENC4, ENC4SP, ENC5V2, ENC8	| SS528V100	|
+| DEC2	| SS626V100	|
+| ENC1Pro, ENCS1Pro	| SS928V100 |
+
+
 * the encoders can be powered with 5V using a powerbank or a USB power and a USB-A to DC 5.5x2.5mm barrel connector cable, provided they can deliver ~2 amps. (Carl Mills@EnDeCo)
 * there's no power regulator between USB-C and regular USB on ENC1V2, so if you provide 9/12V over USB-C tthe device will boot up, but the same voltage will most likely fry whatever's connected to the other USB ports (Carl Mills@EnDeCo)
 
-## 3rd party apps
+**UPDATE 8.04.2022**: by the looks of it TinyENC1 seems to actually have a bit different firmware with no telnet/ssh access enabled by default. If anyone's interested in getting inside those boxes consider donating one or sending me the recovery firmware.
 
+**UPDATE 9.11.2023**: The most recent boxes use a new more powerful CPU, the SS5248V100. From what I read this is a drop-in replacement for Hi35xx chips, namely the Hi3520), more RAM and even larger flash storage.
+
+## 3rd party apps
 Statically compiled armhf applications seem to work fine. I tried ffmpeg and v4l2-ctl and they both worked. 
 * LinkPi-oled-logo-converter: https://github.com/YveIce/LinkPi-oled-logo-converter - tool for converting your graphics to OLED boot logo format
 * ffmpeg: https://johnvansickle.com/ffmpeg/ 
@@ -47,7 +62,6 @@ Statically compiled armhf applications seem to work fine. I tried ffmpeg and v4l
 * v4l2ctl-ctl-with-php: https://github.com/wilwad/v4l2-ctl-with-php - allows remote control of USB webcams params (brightness/contrast/backlight, etc.)
 
 ## Interesting internal pages (not linked) 
-
 Some of the mentioned pages might no longer be available as the frontend has been significantly cleaned up during UI revamp.
 * http://enc1/fac.php - _low level factory settings_ (also uses oled.php, themes.php and remote.php)
 * http://enc1/ndireg.php - for entering the NDI license string (sold separately)
@@ -68,7 +82,6 @@ Engineering leftovers:
 * http://enc1/face.php - face recognition
 
 ## Intercom & tally
-
 The intercom system (since version 20211201) is using an unknown UDP-based protocol on port 7000 for communication through a central server (source not public - installer and binaries located here: https://gitee.com/LinkPi/Service/). Judging by the symbols, the server is a QT app built on LinkLib. The client side runs inside the _/link/bin/Encoder_ process and utilizes LinkLib LinkIntercom interfaces 
 
 The tally system is able to utilize vMix and Sinsam (Chinese visual clone of vMix) APIs and the builtin UART (_/dev/ttyAMA1_) as the source of PGM/PVW signals sent downstream. The documentation states, that (as of 8.04.2022) only the vMix integration is complete.
@@ -81,7 +94,6 @@ As of version 20220705/20220712 there are udev hotplug rules present for USB aud
 
 ## Default passwords/backdoors
 ### SSH/telnet
-
 ```
 root / linkpi.com (Link Pi)
 root / turbosig (TBS)
@@ -120,9 +132,7 @@ The system is said to be in early stage of development and occasional downtime m
 A non-protected ONVIF service is running by default with no real way to disable it through the UI
 
 ## Fixes & hacks
-
 ### Recovering from a bad firmware update 
-
 Full flash packages differ from the upgrade packages. Upgrades are basically .tar files that - generally speaking - include the files that changed since the last firmware version, and full flash are partition images. You need to grab the one for your device from the following link: 
  https://gitee.com/LinkPi/Encoder/wikis/%E5%8D%87%E7%BA%A7&%E5%88%B7%E6%9C%BA/%E5%88%B7%E6%9C%BA%E5%8C%85 
 and follow the instructions below:
@@ -138,7 +148,6 @@ and follow the instructions below:
 If you have problems navigating LinkPi gitee repositories Chrome's built-in translation engine does a very good job.
 
 ### Add support for other HiLink/Huawei 4G dongles
-
 Check the VID and PID of your modem using `lsusb`, and alter accordingly:
 
 /etc/udev/rules.d/11-usb-hotplug.rules
@@ -156,7 +165,6 @@ SUBSYSTEM=="net", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14db", KERNEL=="et
 (the usbUp.sh script just runs udhcpc on the right interface, no need to change anything there)
 
 ### Create & replace the default NO SIGNAL slate image
-
 By default LinkLib uses `/link/config/nosignal.yuv` image as the placeholder image in case a video source is unavailable while the box is streaming. This file is a 1920x1080 raw semi planar 4:2:0 subsampled YUV bitmap. To create a customized slate, convert your 1920x1080 image with ffmpeg like so:
 ```
 ffmpeg yourfile.png -c:v rawvideo -pix_fmt nv21 nosignal.yuv
@@ -164,7 +172,6 @@ ffmpeg yourfile.png -c:v rawvideo -pix_fmt nv21 nosignal.yuv
 and overwrite the original. 
 
 ### Secure empty password system accounts
-
 To disable the possibility of logging in without a password over telnet, change hashes for users other than root to `:x:` (for example using _vi_). You should end up with the following:
 
 ```
@@ -175,11 +182,9 @@ netdev:x:1003:1003:Linux User,,,:/home/netdev:/bin/sh
 ```
 
 ### Disable telnet daemon (OUTDATED, for recent versions look below)
-
 Comment the _telnetd_ line from `/etc/init.d/rcS`.
 
 ### Disable non-secure network services (e.g. telnet, onvif)
-
 Edit /link/config/service.json (thanks to [@Gradinko](https://github.com/Gradinko)) :
 
  /link/config # more service.json  
@@ -310,9 +315,9 @@ The devices might come from factory having firmware versions that are not availa
 * Added USB microphone control.
 * Optimized 4K HDMI signal input.
 * Added ES6 syntax support to the JS Script engine.
-* S version Encoder (LinkJS?) development is complete; welcome to switch to development mode for testing (currently in beta).
+* JS Encoder ([LinkJS](https://www.yuque.com/linkpi/linkjs)) development is complete; welcome to switch to development mode for testing (currently in beta).
 
-Note: The new development mode requires flashing the firmware to experience; this part is not included in the upgrade package.
+Note: The new development mode is not included in the upgrade package (full firmware reflash is required). Development mode then needs to be enabled through the facory setup (fac.php) URL.
 
 ### 5.0.0	build 20260130
 **Warning: the update broke the Intercom page on my ENC1V1**
@@ -323,7 +328,7 @@ Note: The new development mode requires flashing the firmware to experience; thi
 * Optimized SRT stream decoding for HI3520DV400, HI3521DV100, and HI3531DV100 series devices.
 * Optimized RPC service. A brand-new development mode supports developing device audio/video applications via JavaScript ([LinkJS](https://www.yuque.com/linkpi/linkjs)), supporting SS524, SS528, and SS928 series devices.
 
-Note: This new development mode requires flashing the firmware - it is not included in the upgrade package. Development mode then needs to be enabled through the facory setup (fac.php) URL.
+Note: The new development mode is not included in the upgrade package (full firmware reflash is required). Development mode then needs to be enabled through the facory setup (fac.php) URL.
 
 ### 4.4.1	build 20251130
 This update has the following impact on previous features:
