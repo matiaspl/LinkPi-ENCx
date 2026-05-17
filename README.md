@@ -1,9 +1,11 @@
 # Link Pi ENCx encoders
-![F3520D with EX2 extension board](https://linkpi.cn/wp-content/uploads/2020/06/ef0b8c93641ae54-1.png)
-
 This repository started in early 2021 to document my personal reverse engineering efforts. At that time at my workplace we just bought a TBS 2603SE encoder which - incidentally - happened to be based on the same hardware platform as ENC1 that I bought out of curiosity. I found out that both devices were based on a F3520D mainboard (https://linkpi.cn/archives/870), and that's how it all started.
 
 It happened that the base software (firmware) was - and still is - shared among whole line of Link Pi encoders, so ENC-Tiny (TinyENC1), ENC1, ENC1V2, ENC2, ENC5, ENC9 and ENCSH (and TBS) have the same ups and downs so the knowledge I gathered became useful to a quite large community. 
+<p float="left">
+<img src="https://linkpi.cn/wp-content/uploads/2020/06/ef0b8c93641ae54-1.png" alt="F3520D with EX2 expansion board" style="width:43%; height:auto;">
+<img src="https://linkpi.cn/wp-content/uploads/2020/06/f3a23bfcfabebe8.png" alt="F3520D"  style="width:55%; height:auto;">
+</p>
 
 Since then this site became a de-facto place where people come to look for help and information on LinkPi's encoders that the vendor isnt't providing in its' official docs or provides it only in Chinese, which makes it ungooglable. 
 
@@ -31,6 +33,8 @@ Note: SLS's built in parser overwrites MPEGTS video headers with H.264 metadata,
 * audio sampling rate up to 96 kHz is supported (but not enabled - it can be added manually by editing the right PHP script)
 * ~~OPUS audio codec is supported (software only and disabled by default)~~ (no longer undocumented)
 * As of [20231031](https://github.com/matiaspl/LinkPi-ENCx/edit/main/README.md#build-20231031) the encoder has support for adding timestamp information to SEI video stream in-band metadata. UI mentions sinsam ([specs](https://dw.sinsam.com/sinsam/software/%E8%8A%AF%E8%B1%A1SEI%20%E5%B8%A7%E5%90%8C%E6%AD%A5%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83V1.0%20202309.pdf)) and normal (~~I expect this to be "regular" SEI SMPTE-12M timecodes~~ same as sinsam alas not per packet but per GOP - tough luck...)
+
+**UPDATE 17.05.2026** I'm currently working on adding NTP-derived S12M-1 timestamps (H.264, HEVC) and timecodes (NDI). The idea is to use LD_PRELOAD library hooks and take control over parts of communication that would normally flow directly between linklib libraries. In case of timestamps this replaces the "sinsam" mode which isn't very useful outside of China. In NDI it just overwrites the existing ones that start at zero when the encoder starts. Looks promising (it works). Kudos to AI :)
 
 ### Hardware
 | Model | CPU |
