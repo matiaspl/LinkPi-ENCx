@@ -1,7 +1,7 @@
 # Link Pi ENCx encoders
 This repository started in early 2021 to document my personal reverse engineering efforts. At that time at my workplace we just bought a TBS 2603SE encoder which - incidentally - happened to be based on the same hardware platform as ENC1 that I bought out of curiosity. I found out that both devices were based on a F3520D mainboard (https://linkpi.cn/archives/870), and that's how it all started.
 
-It happened that the base software (firmware) was - and still is - shared among whole line of Link Pi encoders, so ENC-Tiny (TinyENC1), ENC1, ENC1V2, ENC2, ENC5, ENC9 and ENCSH (and TBS) have the same ups and downs so the knowledge I gathered became useful to a quite large community. 
+The base software (firmware) was - and still is - shared among whole line of Link Pi encoders, so ENC-Tiny (TinyENC1), ENC1, ENC1V2, ENC2, ENC5, ENC9 and ENCSH (and TBS) have the same ups and downs so the knowledge I gathered became useful to a quite large community. 
 <p float="left">
 <img src="https://linkpi.cn/wp-content/uploads/2020/06/ef0b8c93641ae54-1.png" alt="F3520D with EX2 expansion board" style="width:43%; height:auto;">
 <img src="https://linkpi.cn/wp-content/uploads/2020/06/f3a23bfcfabebe8.png" alt="F3520D"  style="width:55%; height:auto;">
