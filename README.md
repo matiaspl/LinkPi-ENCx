@@ -324,7 +324,7 @@ The devices might come from factory having firmware versions that are not availa
 Note: The new development mode is not included in the upgrade package (full firmware reflash is required). Development mode then needs to be enabled through the facory setup (fac.php) URL.
 
 ### 5.0.0	build 20260130
-**Warning: the update broke the Intercom page on my ENC1V1**
+**Warning: the update broke the Intercom page on my ENC1V1** (restoring default settings can very likely fix it)
 
 * Fixed SLS service memory usage issue.
 * Added support for TRTC streaming ([Tencent RTC](https://console.cloud.tencent.com/trtc)) to SS524V100 series devices.
@@ -714,5 +714,5 @@ Notice - updating the software from 20230322 to this version softbricked my unit
 - https://gitee.com/LinkPi/Encoder/issues - bug list (I'm not sure any developer ever looked at those)
 - https://blog.csdn.net/weixin_41486034 - Chinese blog with a lot of fun ENCx use cases and ideas (most likely ran by a Link Pi developer or a tech-savvy salesperson)
 - https://linkpi.cn/archives/444 - a repost of a CSDN article on extensive ENC5 testing
-- http://wiki.endeco.xyz/ - english manual for rebranded and secured LinkPi encoders (no longer operational ;( )
+- http://wiki.endeco.xyz/ - english manual for rebranded and secured LinkPi encoders (offline, fortunately there's the [Web Archive](https://web.archive.org/web/20230330231430/http://wiki.endeco.xyz/) copy)
   
