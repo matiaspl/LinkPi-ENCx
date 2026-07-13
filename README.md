@@ -315,6 +315,21 @@ Note: The following descriptions are slightly redacted release notes translated 
 After the updates up to 20210123 some functions take effect after restarting twice. Newer versions of the firmware seem to perform the restarts automatically.
 
 The devices might come from factory having firmware versions that are not available for download (e.g. 20201111).
+
+### 5.2.0 build 20260531
+* Optimized USB camera capture and reconnection functions
+* Optimized the Line Input capture and Line Output feature for MINI models
+* Optimized Onvif service memory usage
+* Optimized the interaction of the [Custom Layout Manager]
+* Fixed an issue where restarting the device via the [System Settings] page might result in a second restart if the page wasn't refreshed
+* Fixed an issue where the file carousel function on the [Decoding Settings] page might fail to read files occasionally
+* Removed the push streaming option from the [Streaming Output] page; please visit the 【Live Streaming】 page to push streams.
+* Added the ability to add specified video files to the carousel on the [Auto Carousel] page under Extended Functions
+* Added the ability to add filename annotations to video files on the 'File Management - Regular Recording' tab of the [File Recording] page under Extended Functions
+* Added a [Storage Management] page under Experimental Functions, allowing management of files on mounted devices, including deleting/moving/uploading files, etc.
+* Added an image carousel function to the [Decoding Settings] page, allowing the use of image channels as the background of Mix channels.
+Note: Due to the addition of a new image carousel video channel, the default playback address of the Mix channel will change.
+
 ### 5.1.0	build 20260331
 * Added USB microphone control.
 * Optimized 4K HDMI signal input.
