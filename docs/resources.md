@@ -1,0 +1,13 @@
+# External resources
+- https://www.yuque.com/linkpi/encoder/ - Official English documentation
+- https://linkpi.gitbook.io/encoder/ - old official English documentation
+- https://www.yuque.com/linkpi/encoder/pkfir2g98gwpzymt - upgrade firmware repository
+- https://www.yuque.com/linkpi/encoder/kpvg3mbg5ussrx69 - boot ("full flash") firmware repository
+- https://www.yuque.com/linkpi/linkjs/ - LinkJS development documentation
+- https://gitee.com/LinkPi/ - official Link Pi code repository
+- https://gitee.com/LinkPi/Encoder/wikis - official docs, good source of knowledge about the internals and firmware
+- https://linkpi.cn/archives/1388 - HTTP API ([Google translate](https://linkpi-cn.translate.goog/archives/1388?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=pl&_x_tr_pto=wapp))
+- https://gitee.com/LinkPi/Encoder/issues - bug list (I'm not sure any developer ever looked at those)
+- https://blog.csdn.net/weixin_41486034 - Chinese blog with a lot of fun ENCx use cases and ideas (most likely ran by a Link Pi developer or a tech-savvy salesperson)
+- https://linkpi.cn/archives/444 - a repost of a CSDN article on extensive ENC5 testing
+- http://wiki.endeco.xyz/ - english manual for rebranded and secured LinkPi encoders (offline, fortunately there's the [Web Archive](https://web.archive.org/web/20230330231430/http://wiki.endeco.xyz/) copy)
